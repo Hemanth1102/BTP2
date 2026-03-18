@@ -1,0 +1,2 @@
+semester,ndcg@10,hit@5,hit@10,rmse,n_students
+6,0.5873,1.0,1.0,0.6514,500

@@ -1,0 +1,1024 @@
+course_id,prof_id,semester,comment,sentiment_score
+CSE101,PROF026,1,one of the best courses i have taken highly interactive sessions,0.9997
+CSE101,PROF026,1,the course content was relevant and up to date with industry trends,0.9997
+CSE101,PROF026,1,very engaging lectures the professor explains concepts clearly,0.9998
+CSE101,PROF026,1,professor was okay explanations were sometimes unclear,0.0163
+CSE101,PROF026,1,very engaging lectures the professor explains concepts clearly,0.9998
+CSE101,PROF026,1,assignments were well structured and helped reinforce learning,0.9997
+CSE101,PROF026,1,professor is very approachable and always ready to help students,0.9998
+CSE101,PROF026,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE101,PROF002,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE101,PROF002,2,some topics were skipped due to time constraints,0.0024
+CSE101,PROF002,2,assignments were too difficult and not related to what was taught,0.0005
+CSE101,PROF002,2,the course was decent assignments could be more challenging,0.9862
+CSE101,PROF002,2,very well organized course with clear learning outcomes,0.9999
+CSE101,PROF002,2,the content felt outdated and not relevant to current practices,0.0002
+CSE101,PROF002,2,very boring lectures professor reads directly from slides,0.0006
+CSE101,PROF002,2,very disappointing course expected much more depth,0.0005
+CSE101,PROF001,3,professor was okay explanations were sometimes unclear,0.0163
+CSE101,PROF001,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE101,PROF001,3,assignments were well structured and helped reinforce learning,0.9997
+CSE101,PROF009,4,very engaging lectures the professor explains concepts clearly,0.9998
+CSE101,PROF009,4,professor is very approachable and always ready to help students,0.9998
+CSE101,PROF009,4,the course content was relevant and up to date with industry trends,0.9997
+CSE101,PROF009,4,the course content was relevant and up to date with industry trends,0.9997
+CSE101,PROF009,4,some topics were skipped due to time constraints,0.0024
+CSE101,PROF009,4,very disappointing course expected much more depth,0.0005
+CSE101,PROF009,4,the course content was relevant and up to date with industry trends,0.9997
+CSE101,PROF004,5,professor was okay explanations were sometimes unclear,0.0163
+CSE101,PROF004,5,the course was decent assignments could be more challenging,0.9862
+CSE101,PROF004,5,poor course structure topics were taught out of order,0.0002
+CSE101,PROF004,5,the professor was often unavailable outside of class hours,0.0021
+CSE101,PROF004,5,assignments were too difficult and not related to what was taught,0.0005
+CSE101,PROF004,5,poor course structure topics were taught out of order,0.0002
+CSE101,PROF011,6,some topics were skipped due to time constraints,0.0024
+CSE101,PROF011,6,the content felt outdated and not relevant to current practices,0.0002
+CSE101,PROF011,6,very well organized course with clear learning outcomes,0.9999
+CSE101,PROF011,6,course organization was average slides were not always up to date,0.0021
+CSE101,PROF011,6,very boring lectures professor reads directly from slides,0.0006
+CSE102,PROF029,1,course organization was average slides were not always up to date,0.0021
+CSE102,PROF029,1,very disappointing course expected much more depth,0.0005
+CSE102,PROF029,1,the course was decent assignments could be more challenging,0.9862
+CSE102,PROF006,2,very disappointing course expected much more depth,0.0005
+CSE102,PROF006,2,the course content was relevant and up to date with industry trends,0.9997
+CSE102,PROF006,2,the course content was relevant and up to date with industry trends,0.9997
+CSE102,PROF006,2,one of the best courses i have taken highly interactive sessions,0.9997
+CSE102,PROF006,2,professor was okay explanations were sometimes unclear,0.0163
+CSE102,PROF006,2,one of the best courses i have taken highly interactive sessions,0.9997
+CSE102,PROF006,2,excellent teaching style made difficult topics easy to understand,0.9989
+CSE102,PROF003,3,very disappointing course expected much more depth,0.0005
+CSE102,PROF003,3,the professor was often unavailable outside of class hours,0.0021
+CSE102,PROF003,3,the course was decent assignments could be more challenging,0.9862
+CSE102,PROF003,3,the course was decent assignments could be more challenging,0.9862
+CSE102,PROF003,3,very disappointing course expected much more depth,0.0005
+CSE102,PROF029,4,very disappointing course expected much more depth,0.0005
+CSE102,PROF029,4,the professor was often unavailable outside of class hours,0.0021
+CSE102,PROF029,4,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE102,PROF029,4,assignments were too difficult and not related to what was taught,0.0005
+CSE102,PROF029,4,course organization was average slides were not always up to date,0.0021
+CSE102,PROF029,4,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE102,PROF029,4,very boring lectures professor reads directly from slides,0.0006
+CSE102,PROF029,4,the content felt outdated and not relevant to current practices,0.0002
+CSE102,PROF011,5,very disappointing course expected much more depth,0.0005
+CSE102,PROF011,5,the course was decent assignments could be more challenging,0.9862
+CSE102,PROF011,5,very disappointing course expected much more depth,0.0005
+CSE102,PROF011,5,assignments were too difficult and not related to what was taught,0.0005
+CSE102,PROF011,5,very disappointing course expected much more depth,0.0005
+CSE102,PROF011,5,average course content was okay but could have been more detailed,0.0097
+CSE102,PROF020,6,the professor s real world examples made the subject very interesting,0.9998
+CSE102,PROF020,6,the course was decent assignments could be more challenging,0.9862
+CSE102,PROF020,6,the course was decent assignments could be more challenging,0.9862
+CSE102,PROF020,6,very well organized course with clear learning outcomes,0.9999
+CSE102,PROF020,6,poor course structure topics were taught out of order,0.0002
+CSE102,PROF020,6,very well organized course with clear learning outcomes,0.9999
+CSE102,PROF020,6,very disappointing course expected much more depth,0.0005
+CSE102,PROF020,6,very engaging lectures the professor explains concepts clearly,0.9998
+CSE201,PROF016,1,very disappointing course expected much more depth,0.0005
+CSE201,PROF016,1,the content felt outdated and not relevant to current practices,0.0002
+CSE201,PROF016,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE201,PROF016,1,the professor was often unavailable outside of class hours,0.0021
+CSE201,PROF016,1,very disappointing course expected much more depth,0.0005
+CSE201,PROF016,1,very disappointing course expected much more depth,0.0005
+CSE201,PROF016,1,assignments were too difficult and not related to what was taught,0.0005
+CSE201,PROF001,2,course organization was average slides were not always up to date,0.0021
+CSE201,PROF001,2,the professor s real world examples made the subject very interesting,0.9998
+CSE201,PROF001,2,some topics were skipped due to time constraints,0.0024
+CSE201,PROF001,2,excellent teaching style made difficult topics easy to understand,0.9989
+CSE201,PROF001,2,the course content was relevant and up to date with industry trends,0.9997
+CSE201,PROF001,2,assignments were well structured and helped reinforce learning,0.9997
+CSE201,PROF001,2,some topics were skipped due to time constraints,0.0024
+CSE201,PROF001,2,course organization was average slides were not always up to date,0.0021
+CSE201,PROF021,3,the course was decent assignments could be more challenging,0.9862
+CSE201,PROF021,3,average course content was okay but could have been more detailed,0.0097
+CSE201,PROF021,3,poor course structure topics were taught out of order,0.0002
+CSE201,PROF021,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE201,PROF020,4,the course content was relevant and up to date with industry trends,0.9997
+CSE201,PROF020,4,some topics were skipped due to time constraints,0.0024
+CSE201,PROF020,4,the content felt outdated and not relevant to current practices,0.0002
+CSE201,PROF020,4,assignments were too difficult and not related to what was taught,0.0005
+CSE201,PROF020,4,some topics were skipped due to time constraints,0.0024
+CSE201,PROF020,4,the professor was often unavailable outside of class hours,0.0021
+CSE201,PROF020,4,very disappointing course expected much more depth,0.0005
+CSE201,PROF020,4,very boring lectures professor reads directly from slides,0.0006
+CSE201,PROF014,5,the course was decent assignments could be more challenging,0.9862
+CSE201,PROF014,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE201,PROF014,5,the course content was relevant and up to date with industry trends,0.9997
+CSE201,PROF014,5,very well organized course with clear learning outcomes,0.9999
+CSE201,PROF002,6,the professor was often unavailable outside of class hours,0.0021
+CSE201,PROF002,6,the professor was often unavailable outside of class hours,0.0021
+CSE201,PROF002,6,the content felt outdated and not relevant to current practices,0.0002
+CSE201,PROF002,6,the professor was often unavailable outside of class hours,0.0021
+CSE201,PROF002,6,poor course structure topics were taught out of order,0.0002
+CSE202,PROF011,1,the professor s real world examples made the subject very interesting,0.9998
+CSE202,PROF011,1,average course content was okay but could have been more detailed,0.0097
+CSE202,PROF011,1,some topics were skipped due to time constraints,0.0024
+CSE202,PROF007,2,the content felt outdated and not relevant to current practices,0.0002
+CSE202,PROF007,2,the content felt outdated and not relevant to current practices,0.0002
+CSE202,PROF007,2,one of the best courses i have taken highly interactive sessions,0.9997
+CSE202,PROF007,2,the professor s real world examples made the subject very interesting,0.9998
+CSE202,PROF007,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE202,PROF007,2,one of the best courses i have taken highly interactive sessions,0.9997
+CSE202,PROF007,2,some topics were skipped due to time constraints,0.0024
+CSE202,PROF023,3,the content felt outdated and not relevant to current practices,0.0002
+CSE202,PROF023,3,the course was decent assignments could be more challenging,0.9862
+CSE202,PROF023,3,professor was okay explanations were sometimes unclear,0.0163
+CSE202,PROF023,3,average course content was okay but could have been more detailed,0.0097
+CSE202,PROF023,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE202,PROF023,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE202,PROF024,4,the professor was often unavailable outside of class hours,0.0021
+CSE202,PROF024,4,poor course structure topics were taught out of order,0.0002
+CSE202,PROF024,4,the content felt outdated and not relevant to current practices,0.0002
+CSE202,PROF024,4,professor was okay explanations were sometimes unclear,0.0163
+CSE202,PROF024,5,the professor was often unavailable outside of class hours,0.0021
+CSE202,PROF024,5,some topics were skipped due to time constraints,0.0024
+CSE202,PROF024,5,assignments were well structured and helped reinforce learning,0.9997
+CSE202,PROF024,5,one of the best courses i have taken highly interactive sessions,0.9997
+CSE202,PROF009,6,excellent teaching style made difficult topics easy to understand,0.9989
+CSE202,PROF009,6,very disappointing course expected much more depth,0.0005
+CSE202,PROF009,6,assignments were well structured and helped reinforce learning,0.9997
+CSE202,PROF009,6,the course was decent assignments could be more challenging,0.9862
+CSE202,PROF009,6,very engaging lectures the professor explains concepts clearly,0.9998
+CSE202,PROF009,6,average course content was okay but could have been more detailed,0.0097
+CSE301,PROF010,1,the course content was relevant and up to date with industry trends,0.9997
+CSE301,PROF010,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE301,PROF010,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE301,PROF010,1,assignments were well structured and helped reinforce learning,0.9997
+CSE301,PROF010,1,poor course structure topics were taught out of order,0.0002
+CSE301,PROF010,1,one of the best courses i have taken highly interactive sessions,0.9997
+CSE301,PROF008,2,course organization was average slides were not always up to date,0.0021
+CSE301,PROF008,2,professor was okay explanations were sometimes unclear,0.0163
+CSE301,PROF008,2,some topics were skipped due to time constraints,0.0024
+CSE301,PROF008,2,very well organized course with clear learning outcomes,0.9999
+CSE301,PROF002,3,very well organized course with clear learning outcomes,0.9999
+CSE301,PROF002,3,poor course structure topics were taught out of order,0.0002
+CSE301,PROF002,3,very well organized course with clear learning outcomes,0.9999
+CSE301,PROF002,3,average course content was okay but could have been more detailed,0.0097
+CSE301,PROF002,3,very boring lectures professor reads directly from slides,0.0006
+CSE301,PROF002,3,professor is very approachable and always ready to help students,0.9998
+CSE301,PROF019,4,excellent teaching style made difficult topics easy to understand,0.9989
+CSE301,PROF019,4,very engaging lectures the professor explains concepts clearly,0.9998
+CSE301,PROF019,4,the professor was often unavailable outside of class hours,0.0021
+CSE301,PROF019,4,the content felt outdated and not relevant to current practices,0.0002
+CSE301,PROF019,4,professor is very approachable and always ready to help students,0.9998
+CSE301,PROF019,4,average course content was okay but could have been more detailed,0.0097
+CSE301,PROF019,4,very engaging lectures the professor explains concepts clearly,0.9998
+CSE301,PROF019,4,very disappointing course expected much more depth,0.0005
+CSE301,PROF027,5,assignments were too difficult and not related to what was taught,0.0005
+CSE301,PROF027,5,professor is very approachable and always ready to help students,0.9998
+CSE301,PROF027,5,excellent teaching style made difficult topics easy to understand,0.9989
+CSE301,PROF027,5,the course content was relevant and up to date with industry trends,0.9997
+CSE301,PROF027,5,assignments were well structured and helped reinforce learning,0.9997
+CSE301,PROF027,5,very boring lectures professor reads directly from slides,0.0006
+CSE301,PROF027,5,professor was okay explanations were sometimes unclear,0.0163
+CSE301,PROF027,5,the course content was relevant and up to date with industry trends,0.9997
+CSE301,PROF005,6,one of the best courses i have taken highly interactive sessions,0.9997
+CSE301,PROF005,6,very boring lectures professor reads directly from slides,0.0006
+CSE301,PROF005,6,the course content was relevant and up to date with industry trends,0.9997
+CSE301,PROF005,6,the course content was relevant and up to date with industry trends,0.9997
+CSE302,PROF012,1,some topics were skipped due to time constraints,0.0024
+CSE302,PROF012,1,the content felt outdated and not relevant to current practices,0.0002
+CSE302,PROF012,1,the content felt outdated and not relevant to current practices,0.0002
+CSE302,PROF012,1,course organization was average slides were not always up to date,0.0021
+CSE302,PROF012,1,excellent teaching style made difficult topics easy to understand,0.9989
+CSE302,PROF012,1,very well organized course with clear learning outcomes,0.9999
+CSE302,PROF014,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CSE302,PROF014,2,the professor was often unavailable outside of class hours,0.0021
+CSE302,PROF014,2,poor course structure topics were taught out of order,0.0002
+CSE302,PROF014,2,the professor was often unavailable outside of class hours,0.0021
+CSE302,PROF014,2,assignments were too difficult and not related to what was taught,0.0005
+CSE302,PROF014,2,assignments were too difficult and not related to what was taught,0.0005
+CSE302,PROF014,2,poor course structure topics were taught out of order,0.0002
+CSE302,PROF014,2,very boring lectures professor reads directly from slides,0.0006
+CSE302,PROF010,3,professor is very approachable and always ready to help students,0.9998
+CSE302,PROF010,3,assignments were well structured and helped reinforce learning,0.9997
+CSE302,PROF010,3,professor is very approachable and always ready to help students,0.9998
+CSE302,PROF010,3,very engaging lectures the professor explains concepts clearly,0.9998
+CSE302,PROF022,4,assignments were well structured and helped reinforce learning,0.9997
+CSE302,PROF022,4,one of the best courses i have taken highly interactive sessions,0.9997
+CSE302,PROF022,4,the professor was often unavailable outside of class hours,0.0021
+CSE302,PROF022,4,very engaging lectures the professor explains concepts clearly,0.9998
+CSE302,PROF022,4,professor was okay explanations were sometimes unclear,0.0163
+CSE302,PROF022,4,the course content was relevant and up to date with industry trends,0.9997
+CSE302,PROF022,4,course organization was average slides were not always up to date,0.0021
+CSE302,PROF020,5,average course content was okay but could have been more detailed,0.0097
+CSE302,PROF020,5,the content felt outdated and not relevant to current practices,0.0002
+CSE302,PROF020,5,average course content was okay but could have been more detailed,0.0097
+CSE302,PROF020,5,some topics were skipped due to time constraints,0.0024
+CSE302,PROF020,5,average course content was okay but could have been more detailed,0.0097
+CSE302,PROF020,5,some topics were skipped due to time constraints,0.0024
+CSE302,PROF020,5,very engaging lectures the professor explains concepts clearly,0.9998
+CSE302,PROF007,6,one of the best courses i have taken highly interactive sessions,0.9997
+CSE302,PROF007,6,very well organized course with clear learning outcomes,0.9999
+CSE302,PROF007,6,poor course structure topics were taught out of order,0.0002
+ECE101,PROF001,1,average course content was okay but could have been more detailed,0.0097
+ECE101,PROF001,1,course organization was average slides were not always up to date,0.0021
+ECE101,PROF001,1,the professor was often unavailable outside of class hours,0.0021
+ECE101,PROF001,1,professor was okay explanations were sometimes unclear,0.0163
+ECE101,PROF001,1,very disappointing course expected much more depth,0.0005
+ECE101,PROF001,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE101,PROF006,2,very disappointing course expected much more depth,0.0005
+ECE101,PROF006,2,some topics were skipped due to time constraints,0.0024
+ECE101,PROF006,2,some topics were skipped due to time constraints,0.0024
+ECE101,PROF006,2,very engaging lectures the professor explains concepts clearly,0.9998
+ECE101,PROF010,3,poor course structure topics were taught out of order,0.0002
+ECE101,PROF010,3,some topics were skipped due to time constraints,0.0024
+ECE101,PROF010,3,one of the best courses i have taken highly interactive sessions,0.9997
+ECE101,PROF010,3,the course content was relevant and up to date with industry trends,0.9997
+ECE101,PROF010,3,the content felt outdated and not relevant to current practices,0.0002
+ECE101,PROF016,4,assignments were well structured and helped reinforce learning,0.9997
+ECE101,PROF016,4,very well organized course with clear learning outcomes,0.9999
+ECE101,PROF016,4,one of the best courses i have taken highly interactive sessions,0.9997
+ECE101,PROF016,4,one of the best courses i have taken highly interactive sessions,0.9997
+ECE101,PROF016,4,the course was decent assignments could be more challenging,0.9862
+ECE101,PROF016,4,one of the best courses i have taken highly interactive sessions,0.9997
+ECE101,PROF016,4,average course content was okay but could have been more detailed,0.0097
+ECE101,PROF004,5,professor is very approachable and always ready to help students,0.9998
+ECE101,PROF004,5,the content felt outdated and not relevant to current practices,0.0002
+ECE101,PROF004,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE101,PROF004,5,the course content was relevant and up to date with industry trends,0.9997
+ECE101,PROF004,5,professor is very approachable and always ready to help students,0.9998
+ECE101,PROF004,5,the course was decent assignments could be more challenging,0.9862
+ECE101,PROF026,6,poor course structure topics were taught out of order,0.0002
+ECE101,PROF026,6,the course was decent assignments could be more challenging,0.9862
+ECE101,PROF026,6,assignments were well structured and helped reinforce learning,0.9997
+ECE101,PROF026,6,very boring lectures professor reads directly from slides,0.0006
+ECE101,PROF026,6,course organization was average slides were not always up to date,0.0021
+ECE101,PROF026,6,professor was okay explanations were sometimes unclear,0.0163
+ECE101,PROF026,6,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE101,PROF026,6,the professor s real world examples made the subject very interesting,0.9998
+ECE102,PROF016,1,assignments were too difficult and not related to what was taught,0.0005
+ECE102,PROF016,1,average course content was okay but could have been more detailed,0.0097
+ECE102,PROF016,1,very boring lectures professor reads directly from slides,0.0006
+ECE102,PROF016,1,very disappointing course expected much more depth,0.0005
+ECE102,PROF016,1,very boring lectures professor reads directly from slides,0.0006
+ECE102,PROF029,2,the content felt outdated and not relevant to current practices,0.0002
+ECE102,PROF029,2,very disappointing course expected much more depth,0.0005
+ECE102,PROF029,2,poor course structure topics were taught out of order,0.0002
+ECE102,PROF009,3,very boring lectures professor reads directly from slides,0.0006
+ECE102,PROF009,3,the content felt outdated and not relevant to current practices,0.0002
+ECE102,PROF009,3,very boring lectures professor reads directly from slides,0.0006
+ECE102,PROF009,3,very disappointing course expected much more depth,0.0005
+ECE102,PROF021,4,one of the best courses i have taken highly interactive sessions,0.9997
+ECE102,PROF021,4,the course was decent assignments could be more challenging,0.9862
+ECE102,PROF021,4,professor is very approachable and always ready to help students,0.9998
+ECE102,PROF021,4,poor course structure topics were taught out of order,0.0002
+ECE102,PROF021,4,the course was decent assignments could be more challenging,0.9862
+ECE102,PROF021,4,the professor was often unavailable outside of class hours,0.0021
+ECE102,PROF021,4,professor was okay explanations were sometimes unclear,0.0163
+ECE102,PROF021,4,average course content was okay but could have been more detailed,0.0097
+ECE102,PROF013,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE102,PROF013,5,very engaging lectures the professor explains concepts clearly,0.9998
+ECE102,PROF013,5,the course was decent assignments could be more challenging,0.9862
+ECE102,PROF012,6,excellent teaching style made difficult topics easy to understand,0.9989
+ECE102,PROF012,6,poor course structure topics were taught out of order,0.0002
+ECE102,PROF012,6,very disappointing course expected much more depth,0.0005
+ECE102,PROF012,6,very boring lectures professor reads directly from slides,0.0006
+ECE102,PROF012,6,average course content was okay but could have been more detailed,0.0097
+ECE201,PROF013,1,very engaging lectures the professor explains concepts clearly,0.9998
+ECE201,PROF013,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE201,PROF013,1,very disappointing course expected much more depth,0.0005
+ECE201,PROF006,2,assignments were too difficult and not related to what was taught,0.0005
+ECE201,PROF006,2,the professor was often unavailable outside of class hours,0.0021
+ECE201,PROF006,2,the professor was often unavailable outside of class hours,0.0021
+ECE201,PROF006,2,the professor s real world examples made the subject very interesting,0.9998
+ECE201,PROF006,2,the content felt outdated and not relevant to current practices,0.0002
+ECE201,PROF006,2,the professor was often unavailable outside of class hours,0.0021
+ECE201,PROF006,2,some topics were skipped due to time constraints,0.0024
+ECE201,PROF006,2,very boring lectures professor reads directly from slides,0.0006
+ECE201,PROF002,3,excellent teaching style made difficult topics easy to understand,0.9989
+ECE201,PROF002,3,assignments were too difficult and not related to what was taught,0.0005
+ECE201,PROF002,3,one of the best courses i have taken highly interactive sessions,0.9997
+ECE201,PROF002,3,professor was okay explanations were sometimes unclear,0.0163
+ECE201,PROF002,3,very well organized course with clear learning outcomes,0.9999
+ECE201,PROF015,4,the course was decent assignments could be more challenging,0.9862
+ECE201,PROF015,4,professor was okay explanations were sometimes unclear,0.0163
+ECE201,PROF015,4,the professor s real world examples made the subject very interesting,0.9998
+ECE201,PROF015,4,very well organized course with clear learning outcomes,0.9999
+ECE201,PROF015,4,some topics were skipped due to time constraints,0.0024
+ECE201,PROF015,4,assignments were well structured and helped reinforce learning,0.9997
+ECE201,PROF009,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE201,PROF009,5,very engaging lectures the professor explains concepts clearly,0.9998
+ECE201,PROF009,5,assignments were too difficult and not related to what was taught,0.0005
+ECE201,PROF027,6,professor was okay explanations were sometimes unclear,0.0163
+ECE201,PROF027,6,course organization was average slides were not always up to date,0.0021
+ECE201,PROF027,6,professor was okay explanations were sometimes unclear,0.0163
+ECE202,PROF019,1,some topics were skipped due to time constraints,0.0024
+ECE202,PROF019,1,professor was okay explanations were sometimes unclear,0.0163
+ECE202,PROF019,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE202,PROF019,1,the content felt outdated and not relevant to current practices,0.0002
+ECE202,PROF019,1,professor was okay explanations were sometimes unclear,0.0163
+ECE202,PROF019,1,excellent teaching style made difficult topics easy to understand,0.9989
+ECE202,PROF019,1,the content felt outdated and not relevant to current practices,0.0002
+ECE202,PROF005,2,very disappointing course expected much more depth,0.0005
+ECE202,PROF005,2,some topics were skipped due to time constraints,0.0024
+ECE202,PROF005,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE202,PROF023,3,the professor s real world examples made the subject very interesting,0.9998
+ECE202,PROF023,3,one of the best courses i have taken highly interactive sessions,0.9997
+ECE202,PROF023,3,professor was okay explanations were sometimes unclear,0.0163
+ECE202,PROF023,3,the professor s real world examples made the subject very interesting,0.9998
+ECE202,PROF023,3,very engaging lectures the professor explains concepts clearly,0.9998
+ECE202,PROF023,3,average course content was okay but could have been more detailed,0.0097
+ECE202,PROF004,4,very disappointing course expected much more depth,0.0005
+ECE202,PROF004,4,excellent teaching style made difficult topics easy to understand,0.9989
+ECE202,PROF004,4,very boring lectures professor reads directly from slides,0.0006
+ECE202,PROF004,4,some topics were skipped due to time constraints,0.0024
+ECE202,PROF004,4,some topics were skipped due to time constraints,0.0024
+ECE202,PROF022,5,some topics were skipped due to time constraints,0.0024
+ECE202,PROF022,5,course organization was average slides were not always up to date,0.0021
+ECE202,PROF022,5,professor is very approachable and always ready to help students,0.9998
+ECE202,PROF022,5,very disappointing course expected much more depth,0.0005
+ECE202,PROF022,5,excellent teaching style made difficult topics easy to understand,0.9989
+ECE202,PROF022,5,course organization was average slides were not always up to date,0.0021
+ECE202,PROF022,5,one of the best courses i have taken highly interactive sessions,0.9997
+ECE202,PROF026,6,some topics were skipped due to time constraints,0.0024
+ECE202,PROF026,6,very disappointing course expected much more depth,0.0005
+ECE202,PROF026,6,professor is very approachable and always ready to help students,0.9998
+ECE202,PROF026,6,poor course structure topics were taught out of order,0.0002
+ECE202,PROF026,6,the course was decent assignments could be more challenging,0.9862
+ECE202,PROF026,6,some topics were skipped due to time constraints,0.0024
+ECE301,PROF014,1,some topics were skipped due to time constraints,0.0024
+ECE301,PROF014,1,poor course structure topics were taught out of order,0.0002
+ECE301,PROF014,1,assignments were too difficult and not related to what was taught,0.0005
+ECE301,PROF014,1,course organization was average slides were not always up to date,0.0021
+ECE301,PROF014,1,the content felt outdated and not relevant to current practices,0.0002
+ECE301,PROF014,1,very engaging lectures the professor explains concepts clearly,0.9998
+ECE301,PROF014,1,average course content was okay but could have been more detailed,0.0097
+ECE301,PROF014,1,very disappointing course expected much more depth,0.0005
+ECE301,PROF019,2,the content felt outdated and not relevant to current practices,0.0002
+ECE301,PROF019,2,poor course structure topics were taught out of order,0.0002
+ECE301,PROF019,2,the professor s real world examples made the subject very interesting,0.9998
+ECE301,PROF019,2,assignments were too difficult and not related to what was taught,0.0005
+ECE301,PROF018,3,the professor s real world examples made the subject very interesting,0.9998
+ECE301,PROF018,3,excellent teaching style made difficult topics easy to understand,0.9989
+ECE301,PROF018,3,professor is very approachable and always ready to help students,0.9998
+ECE301,PROF027,4,the course was decent assignments could be more challenging,0.9862
+ECE301,PROF027,4,very boring lectures professor reads directly from slides,0.0006
+ECE301,PROF027,4,course organization was average slides were not always up to date,0.0021
+ECE301,PROF027,4,assignments were too difficult and not related to what was taught,0.0005
+ECE301,PROF027,4,very well organized course with clear learning outcomes,0.9999
+ECE301,PROF027,5,professor is very approachable and always ready to help students,0.9998
+ECE301,PROF027,5,one of the best courses i have taken highly interactive sessions,0.9997
+ECE301,PROF027,5,the professor s real world examples made the subject very interesting,0.9998
+ECE301,PROF027,5,the professor s real world examples made the subject very interesting,0.9998
+ECE301,PROF027,5,the professor s real world examples made the subject very interesting,0.9998
+ECE301,PROF027,5,one of the best courses i have taken highly interactive sessions,0.9997
+ECE301,PROF014,6,professor was okay explanations were sometimes unclear,0.0163
+ECE301,PROF014,6,the course was decent assignments could be more challenging,0.9862
+ECE301,PROF014,6,one of the best courses i have taken highly interactive sessions,0.9997
+ECE301,PROF014,6,professor was okay explanations were sometimes unclear,0.0163
+ECE301,PROF014,6,very engaging lectures the professor explains concepts clearly,0.9998
+ECE301,PROF014,6,very boring lectures professor reads directly from slides,0.0006
+ECE302,PROF022,1,poor course structure topics were taught out of order,0.0002
+ECE302,PROF022,1,average course content was okay but could have been more detailed,0.0097
+ECE302,PROF022,1,the content felt outdated and not relevant to current practices,0.0002
+ECE302,PROF022,1,the content felt outdated and not relevant to current practices,0.0002
+ECE302,PROF022,1,very engaging lectures the professor explains concepts clearly,0.9998
+ECE302,PROF022,1,very boring lectures professor reads directly from slides,0.0006
+ECE302,PROF030,2,the course content was relevant and up to date with industry trends,0.9997
+ECE302,PROF030,2,the content felt outdated and not relevant to current practices,0.0002
+ECE302,PROF030,2,the content felt outdated and not relevant to current practices,0.0002
+ECE302,PROF030,2,assignments were too difficult and not related to what was taught,0.0005
+ECE302,PROF030,2,some topics were skipped due to time constraints,0.0024
+ECE302,PROF030,2,some topics were skipped due to time constraints,0.0024
+ECE302,PROF030,2,professor was okay explanations were sometimes unclear,0.0163
+ECE302,PROF019,3,excellent teaching style made difficult topics easy to understand,0.9989
+ECE302,PROF019,3,very engaging lectures the professor explains concepts clearly,0.9998
+ECE302,PROF019,3,professor is very approachable and always ready to help students,0.9998
+ECE302,PROF019,3,the professor s real world examples made the subject very interesting,0.9998
+ECE302,PROF019,3,excellent teaching style made difficult topics easy to understand,0.9989
+ECE302,PROF008,4,the content felt outdated and not relevant to current practices,0.0002
+ECE302,PROF008,4,the content felt outdated and not relevant to current practices,0.0002
+ECE302,PROF008,4,the professor s real world examples made the subject very interesting,0.9998
+ECE302,PROF008,4,excellent teaching style made difficult topics easy to understand,0.9989
+ECE302,PROF008,4,the professor s real world examples made the subject very interesting,0.9998
+ECE302,PROF008,4,very boring lectures professor reads directly from slides,0.0006
+ECE302,PROF008,4,one of the best courses i have taken highly interactive sessions,0.9997
+ECE302,PROF010,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE302,PROF010,5,very engaging lectures the professor explains concepts clearly,0.9998
+ECE302,PROF010,5,excellent teaching style made difficult topics easy to understand,0.9989
+ECE302,PROF010,5,excellent teaching style made difficult topics easy to understand,0.9989
+ECE302,PROF010,5,some topics were skipped due to time constraints,0.0024
+ECE302,PROF010,5,the course content was relevant and up to date with industry trends,0.9997
+ECE302,PROF010,5,excellent teaching style made difficult topics easy to understand,0.9989
+ECE302,PROF010,5,one of the best courses i have taken highly interactive sessions,0.9997
+ECE302,PROF013,6,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ECE302,PROF013,6,poor course structure topics were taught out of order,0.0002
+ECE302,PROF013,6,assignments were well structured and helped reinforce learning,0.9997
+ME101,PROF028,1,very disappointing course expected much more depth,0.0005
+ME101,PROF028,1,some topics were skipped due to time constraints,0.0024
+ME101,PROF028,1,very well organized course with clear learning outcomes,0.9999
+ME101,PROF028,1,average course content was okay but could have been more detailed,0.0097
+ME101,PROF028,1,the course content was relevant and up to date with industry trends,0.9997
+ME101,PROF028,1,course organization was average slides were not always up to date,0.0021
+ME101,PROF028,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME101,PROF028,1,professor is very approachable and always ready to help students,0.9998
+ME101,PROF002,2,professor was okay explanations were sometimes unclear,0.0163
+ME101,PROF002,2,assignments were too difficult and not related to what was taught,0.0005
+ME101,PROF002,2,poor course structure topics were taught out of order,0.0002
+ME101,PROF019,3,excellent teaching style made difficult topics easy to understand,0.9989
+ME101,PROF019,3,very boring lectures professor reads directly from slides,0.0006
+ME101,PROF019,3,very well organized course with clear learning outcomes,0.9999
+ME101,PROF019,3,very engaging lectures the professor explains concepts clearly,0.9998
+ME101,PROF017,4,some topics were skipped due to time constraints,0.0024
+ME101,PROF017,4,one of the best courses i have taken highly interactive sessions,0.9997
+ME101,PROF017,4,the professor s real world examples made the subject very interesting,0.9998
+ME101,PROF017,4,the professor s real world examples made the subject very interesting,0.9998
+ME101,PROF017,4,some topics were skipped due to time constraints,0.0024
+ME101,PROF017,4,course organization was average slides were not always up to date,0.0021
+ME101,PROF017,4,assignments were well structured and helped reinforce learning,0.9997
+ME101,PROF017,4,the professor s real world examples made the subject very interesting,0.9998
+ME101,PROF019,5,very engaging lectures the professor explains concepts clearly,0.9998
+ME101,PROF019,5,very well organized course with clear learning outcomes,0.9999
+ME101,PROF019,5,the professor s real world examples made the subject very interesting,0.9998
+ME101,PROF020,6,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME101,PROF020,6,assignments were well structured and helped reinforce learning,0.9997
+ME101,PROF020,6,assignments were well structured and helped reinforce learning,0.9997
+ME101,PROF020,6,one of the best courses i have taken highly interactive sessions,0.9997
+ME101,PROF020,6,very well organized course with clear learning outcomes,0.9999
+ME101,PROF020,6,very disappointing course expected much more depth,0.0005
+ME101,PROF020,6,excellent teaching style made difficult topics easy to understand,0.9989
+ME102,PROF004,1,very well organized course with clear learning outcomes,0.9999
+ME102,PROF004,1,professor was okay explanations were sometimes unclear,0.0163
+ME102,PROF004,1,course organization was average slides were not always up to date,0.0021
+ME102,PROF004,1,professor is very approachable and always ready to help students,0.9998
+ME102,PROF004,1,the course was decent assignments could be more challenging,0.9862
+ME102,PROF004,1,professor was okay explanations were sometimes unclear,0.0163
+ME102,PROF004,1,the course was decent assignments could be more challenging,0.9862
+ME102,PROF025,2,professor was okay explanations were sometimes unclear,0.0163
+ME102,PROF025,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME102,PROF025,2,assignments were too difficult and not related to what was taught,0.0005
+ME102,PROF025,2,professor was okay explanations were sometimes unclear,0.0163
+ME102,PROF025,2,the course content was relevant and up to date with industry trends,0.9997
+ME102,PROF006,3,excellent teaching style made difficult topics easy to understand,0.9989
+ME102,PROF006,3,some topics were skipped due to time constraints,0.0024
+ME102,PROF006,3,some topics were skipped due to time constraints,0.0024
+ME102,PROF006,3,professor is very approachable and always ready to help students,0.9998
+ME102,PROF006,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME102,PROF006,3,professor is very approachable and always ready to help students,0.9998
+ME102,PROF006,3,course organization was average slides were not always up to date,0.0021
+ME102,PROF006,3,some topics were skipped due to time constraints,0.0024
+ME102,PROF006,4,excellent teaching style made difficult topics easy to understand,0.9989
+ME102,PROF006,4,assignments were well structured and helped reinforce learning,0.9997
+ME102,PROF006,4,assignments were well structured and helped reinforce learning,0.9997
+ME102,PROF006,4,course organization was average slides were not always up to date,0.0021
+ME102,PROF006,4,excellent teaching style made difficult topics easy to understand,0.9989
+ME102,PROF026,5,average course content was okay but could have been more detailed,0.0097
+ME102,PROF026,5,excellent teaching style made difficult topics easy to understand,0.9989
+ME102,PROF026,5,course organization was average slides were not always up to date,0.0021
+ME102,PROF026,5,the professor s real world examples made the subject very interesting,0.9998
+ME102,PROF026,5,course organization was average slides were not always up to date,0.0021
+ME102,PROF026,5,very well organized course with clear learning outcomes,0.9999
+ME102,PROF026,5,very disappointing course expected much more depth,0.0005
+ME102,PROF026,5,the course content was relevant and up to date with industry trends,0.9997
+ME102,PROF005,6,average course content was okay but could have been more detailed,0.0097
+ME102,PROF005,6,the content felt outdated and not relevant to current practices,0.0002
+ME102,PROF005,6,one of the best courses i have taken highly interactive sessions,0.9997
+ME102,PROF005,6,average course content was okay but could have been more detailed,0.0097
+ME102,PROF005,6,poor course structure topics were taught out of order,0.0002
+ME102,PROF005,6,assignments were too difficult and not related to what was taught,0.0005
+ME201,PROF014,1,some topics were skipped due to time constraints,0.0024
+ME201,PROF014,1,very boring lectures professor reads directly from slides,0.0006
+ME201,PROF014,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME201,PROF022,2,assignments were well structured and helped reinforce learning,0.9997
+ME201,PROF022,2,the course was decent assignments could be more challenging,0.9862
+ME201,PROF022,2,the course content was relevant and up to date with industry trends,0.9997
+ME201,PROF022,2,assignments were too difficult and not related to what was taught,0.0005
+ME201,PROF022,2,very engaging lectures the professor explains concepts clearly,0.9998
+ME201,PROF007,3,the course content was relevant and up to date with industry trends,0.9997
+ME201,PROF007,3,professor is very approachable and always ready to help students,0.9998
+ME201,PROF007,3,very engaging lectures the professor explains concepts clearly,0.9998
+ME201,PROF007,3,excellent teaching style made difficult topics easy to understand,0.9989
+ME201,PROF007,3,poor course structure topics were taught out of order,0.0002
+ME201,PROF007,3,average course content was okay but could have been more detailed,0.0097
+ME201,PROF007,3,course organization was average slides were not always up to date,0.0021
+ME201,PROF007,3,professor is very approachable and always ready to help students,0.9998
+ME201,PROF021,4,some topics were skipped due to time constraints,0.0024
+ME201,PROF021,4,very well organized course with clear learning outcomes,0.9999
+ME201,PROF021,4,professor is very approachable and always ready to help students,0.9998
+ME201,PROF021,4,course organization was average slides were not always up to date,0.0021
+ME201,PROF021,4,some topics were skipped due to time constraints,0.0024
+ME201,PROF021,4,the course was decent assignments could be more challenging,0.9862
+ME201,PROF021,4,very engaging lectures the professor explains concepts clearly,0.9998
+ME201,PROF021,4,very well organized course with clear learning outcomes,0.9999
+ME201,PROF027,5,professor was okay explanations were sometimes unclear,0.0163
+ME201,PROF027,5,very disappointing course expected much more depth,0.0005
+ME201,PROF027,5,the professor was often unavailable outside of class hours,0.0021
+ME201,PROF027,5,the content felt outdated and not relevant to current practices,0.0002
+ME201,PROF027,5,very boring lectures professor reads directly from slides,0.0006
+ME201,PROF027,5,very boring lectures professor reads directly from slides,0.0006
+ME201,PROF009,6,the course was decent assignments could be more challenging,0.9862
+ME201,PROF009,6,professor is very approachable and always ready to help students,0.9998
+ME201,PROF009,6,the content felt outdated and not relevant to current practices,0.0002
+ME201,PROF009,6,professor was okay explanations were sometimes unclear,0.0163
+ME201,PROF009,6,professor is very approachable and always ready to help students,0.9998
+ME201,PROF009,6,some topics were skipped due to time constraints,0.0024
+ME201,PROF009,6,some topics were skipped due to time constraints,0.0024
+ME201,PROF009,6,some topics were skipped due to time constraints,0.0024
+ME202,PROF030,1,the professor was often unavailable outside of class hours,0.0021
+ME202,PROF030,1,the content felt outdated and not relevant to current practices,0.0002
+ME202,PROF030,1,the content felt outdated and not relevant to current practices,0.0002
+ME202,PROF030,1,professor is very approachable and always ready to help students,0.9998
+ME202,PROF030,1,professor is very approachable and always ready to help students,0.9998
+ME202,PROF030,1,the course was decent assignments could be more challenging,0.9862
+ME202,PROF030,1,the professor s real world examples made the subject very interesting,0.9998
+ME202,PROF030,1,assignments were too difficult and not related to what was taught,0.0005
+ME202,PROF030,2,very boring lectures professor reads directly from slides,0.0006
+ME202,PROF030,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME202,PROF030,2,assignments were too difficult and not related to what was taught,0.0005
+ME202,PROF030,2,some topics were skipped due to time constraints,0.0024
+ME202,PROF030,2,course organization was average slides were not always up to date,0.0021
+ME202,PROF030,2,average course content was okay but could have been more detailed,0.0097
+ME202,PROF030,2,professor was okay explanations were sometimes unclear,0.0163
+ME202,PROF030,2,average course content was okay but could have been more detailed,0.0097
+ME202,PROF003,3,the professor was often unavailable outside of class hours,0.0021
+ME202,PROF003,3,the content felt outdated and not relevant to current practices,0.0002
+ME202,PROF003,3,the professor was often unavailable outside of class hours,0.0021
+ME202,PROF003,3,assignments were well structured and helped reinforce learning,0.9997
+ME202,PROF003,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME202,PROF003,3,the course content was relevant and up to date with industry trends,0.9997
+ME202,PROF013,4,the professor was often unavailable outside of class hours,0.0021
+ME202,PROF013,4,the professor s real world examples made the subject very interesting,0.9998
+ME202,PROF013,4,very disappointing course expected much more depth,0.0005
+ME202,PROF013,5,average course content was okay but could have been more detailed,0.0097
+ME202,PROF013,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME202,PROF013,5,the course was decent assignments could be more challenging,0.9862
+ME202,PROF013,5,very engaging lectures the professor explains concepts clearly,0.9998
+ME202,PROF011,6,course organization was average slides were not always up to date,0.0021
+ME202,PROF011,6,some topics were skipped due to time constraints,0.0024
+ME202,PROF011,6,the professor was often unavailable outside of class hours,0.0021
+ME202,PROF011,6,professor was okay explanations were sometimes unclear,0.0163
+ME202,PROF011,6,course organization was average slides were not always up to date,0.0021
+ME202,PROF011,6,the content felt outdated and not relevant to current practices,0.0002
+ME202,PROF011,6,excellent teaching style made difficult topics easy to understand,0.9989
+ME202,PROF011,6,very boring lectures professor reads directly from slides,0.0006
+ME301,PROF009,1,the course was decent assignments could be more challenging,0.9862
+ME301,PROF009,1,professor is very approachable and always ready to help students,0.9998
+ME301,PROF009,1,assignments were well structured and helped reinforce learning,0.9997
+ME301,PROF009,1,one of the best courses i have taken highly interactive sessions,0.9997
+ME301,PROF009,1,assignments were well structured and helped reinforce learning,0.9997
+ME301,PROF009,1,very well organized course with clear learning outcomes,0.9999
+ME301,PROF009,1,course organization was average slides were not always up to date,0.0021
+ME301,PROF009,1,the content felt outdated and not relevant to current practices,0.0002
+ME301,PROF015,2,one of the best courses i have taken highly interactive sessions,0.9997
+ME301,PROF015,2,excellent teaching style made difficult topics easy to understand,0.9989
+ME301,PROF015,2,professor is very approachable and always ready to help students,0.9998
+ME301,PROF015,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME301,PROF015,2,excellent teaching style made difficult topics easy to understand,0.9989
+ME301,PROF015,2,excellent teaching style made difficult topics easy to understand,0.9989
+ME301,PROF028,3,the course was decent assignments could be more challenging,0.9862
+ME301,PROF028,3,professor is very approachable and always ready to help students,0.9998
+ME301,PROF028,3,the content felt outdated and not relevant to current practices,0.0002
+ME301,PROF028,3,the professor s real world examples made the subject very interesting,0.9998
+ME301,PROF028,3,very engaging lectures the professor explains concepts clearly,0.9998
+ME301,PROF026,4,very disappointing course expected much more depth,0.0005
+ME301,PROF026,4,excellent teaching style made difficult topics easy to understand,0.9989
+ME301,PROF026,4,professor was okay explanations were sometimes unclear,0.0163
+ME301,PROF020,5,professor is very approachable and always ready to help students,0.9998
+ME301,PROF020,5,very engaging lectures the professor explains concepts clearly,0.9998
+ME301,PROF020,5,excellent teaching style made difficult topics easy to understand,0.9989
+ME301,PROF020,5,very well organized course with clear learning outcomes,0.9999
+ME301,PROF017,6,professor was okay explanations were sometimes unclear,0.0163
+ME301,PROF017,6,the course was decent assignments could be more challenging,0.9862
+ME301,PROF017,6,course organization was average slides were not always up to date,0.0021
+ME302,PROF014,1,the professor was often unavailable outside of class hours,0.0021
+ME302,PROF014,1,very engaging lectures the professor explains concepts clearly,0.9998
+ME302,PROF014,1,course organization was average slides were not always up to date,0.0021
+ME302,PROF014,1,the course was decent assignments could be more challenging,0.9862
+ME302,PROF014,1,the professor s real world examples made the subject very interesting,0.9998
+ME302,PROF014,1,professor was okay explanations were sometimes unclear,0.0163
+ME302,PROF014,1,average course content was okay but could have been more detailed,0.0097
+ME302,PROF014,1,the course content was relevant and up to date with industry trends,0.9997
+ME302,PROF014,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+ME302,PROF014,2,the course was decent assignments could be more challenging,0.9862
+ME302,PROF014,2,the content felt outdated and not relevant to current practices,0.0002
+ME302,PROF014,2,average course content was okay but could have been more detailed,0.0097
+ME302,PROF014,2,very boring lectures professor reads directly from slides,0.0006
+ME302,PROF014,2,assignments were too difficult and not related to what was taught,0.0005
+ME302,PROF014,2,course organization was average slides were not always up to date,0.0021
+ME302,PROF014,2,the content felt outdated and not relevant to current practices,0.0002
+ME302,PROF005,3,very disappointing course expected much more depth,0.0005
+ME302,PROF005,3,average course content was okay but could have been more detailed,0.0097
+ME302,PROF005,3,professor is very approachable and always ready to help students,0.9998
+ME302,PROF019,4,some topics were skipped due to time constraints,0.0024
+ME302,PROF019,4,assignments were too difficult and not related to what was taught,0.0005
+ME302,PROF019,4,very disappointing course expected much more depth,0.0005
+ME302,PROF019,4,poor course structure topics were taught out of order,0.0002
+ME302,PROF019,4,very boring lectures professor reads directly from slides,0.0006
+ME302,PROF019,4,assignments were too difficult and not related to what was taught,0.0005
+ME302,PROF019,4,the content felt outdated and not relevant to current practices,0.0002
+ME302,PROF019,4,very well organized course with clear learning outcomes,0.9999
+ME302,PROF025,5,one of the best courses i have taken highly interactive sessions,0.9997
+ME302,PROF025,5,some topics were skipped due to time constraints,0.0024
+ME302,PROF025,5,some topics were skipped due to time constraints,0.0024
+ME302,PROF025,5,assignments were well structured and helped reinforce learning,0.9997
+ME302,PROF025,5,very engaging lectures the professor explains concepts clearly,0.9998
+ME302,PROF025,5,professor was okay explanations were sometimes unclear,0.0163
+ME302,PROF025,5,some topics were skipped due to time constraints,0.0024
+ME302,PROF025,5,excellent teaching style made difficult topics easy to understand,0.9989
+ME302,PROF004,6,one of the best courses i have taken highly interactive sessions,0.9997
+ME302,PROF004,6,one of the best courses i have taken highly interactive sessions,0.9997
+ME302,PROF004,6,very engaging lectures the professor explains concepts clearly,0.9998
+CE101,PROF004,1,the course content was relevant and up to date with industry trends,0.9997
+CE101,PROF004,1,course organization was average slides were not always up to date,0.0021
+CE101,PROF004,1,average course content was okay but could have been more detailed,0.0097
+CE101,PROF004,1,course organization was average slides were not always up to date,0.0021
+CE101,PROF025,2,the course was decent assignments could be more challenging,0.9862
+CE101,PROF025,2,poor course structure topics were taught out of order,0.0002
+CE101,PROF025,2,very well organized course with clear learning outcomes,0.9999
+CE101,PROF025,2,the professor s real world examples made the subject very interesting,0.9998
+CE101,PROF026,3,poor course structure topics were taught out of order,0.0002
+CE101,PROF026,3,very well organized course with clear learning outcomes,0.9999
+CE101,PROF026,3,the professor was often unavailable outside of class hours,0.0021
+CE101,PROF026,3,very boring lectures professor reads directly from slides,0.0006
+CE101,PROF026,3,professor was okay explanations were sometimes unclear,0.0163
+CE101,PROF026,3,very disappointing course expected much more depth,0.0005
+CE101,PROF026,3,one of the best courses i have taken highly interactive sessions,0.9997
+CE101,PROF026,3,course organization was average slides were not always up to date,0.0021
+CE101,PROF028,4,some topics were skipped due to time constraints,0.0024
+CE101,PROF028,4,some topics were skipped due to time constraints,0.0024
+CE101,PROF028,4,the content felt outdated and not relevant to current practices,0.0002
+CE101,PROF029,5,very engaging lectures the professor explains concepts clearly,0.9998
+CE101,PROF029,5,very disappointing course expected much more depth,0.0005
+CE101,PROF029,5,very boring lectures professor reads directly from slides,0.0006
+CE101,PROF029,6,course organization was average slides were not always up to date,0.0021
+CE101,PROF029,6,one of the best courses i have taken highly interactive sessions,0.9997
+CE101,PROF029,6,the course was decent assignments could be more challenging,0.9862
+CE101,PROF029,6,very disappointing course expected much more depth,0.0005
+CE101,PROF029,6,the course content was relevant and up to date with industry trends,0.9997
+CE102,PROF009,1,very boring lectures professor reads directly from slides,0.0006
+CE102,PROF009,1,the course was decent assignments could be more challenging,0.9862
+CE102,PROF009,1,professor was okay explanations were sometimes unclear,0.0163
+CE102,PROF009,1,professor was okay explanations were sometimes unclear,0.0163
+CE102,PROF009,1,very well organized course with clear learning outcomes,0.9999
+CE102,PROF009,1,some topics were skipped due to time constraints,0.0024
+CE102,PROF009,1,very boring lectures professor reads directly from slides,0.0006
+CE102,PROF021,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE102,PROF021,2,the content felt outdated and not relevant to current practices,0.0002
+CE102,PROF021,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE102,PROF021,2,assignments were well structured and helped reinforce learning,0.9997
+CE102,PROF021,2,some topics were skipped due to time constraints,0.0024
+CE102,PROF021,2,poor course structure topics were taught out of order,0.0002
+CE102,PROF019,3,the course was decent assignments could be more challenging,0.9862
+CE102,PROF019,3,very disappointing course expected much more depth,0.0005
+CE102,PROF019,3,assignments were too difficult and not related to what was taught,0.0005
+CE102,PROF019,3,the course was decent assignments could be more challenging,0.9862
+CE102,PROF019,3,excellent teaching style made difficult topics easy to understand,0.9989
+CE102,PROF019,3,average course content was okay but could have been more detailed,0.0097
+CE102,PROF019,3,course organization was average slides were not always up to date,0.0021
+CE102,PROF016,4,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE102,PROF016,4,one of the best courses i have taken highly interactive sessions,0.9997
+CE102,PROF016,4,very engaging lectures the professor explains concepts clearly,0.9998
+CE102,PROF016,4,average course content was okay but could have been more detailed,0.0097
+CE102,PROF016,4,very well organized course with clear learning outcomes,0.9999
+CE102,PROF016,4,one of the best courses i have taken highly interactive sessions,0.9997
+CE102,PROF016,4,the course content was relevant and up to date with industry trends,0.9997
+CE102,PROF006,5,excellent teaching style made difficult topics easy to understand,0.9989
+CE102,PROF006,5,professor is very approachable and always ready to help students,0.9998
+CE102,PROF006,5,professor was okay explanations were sometimes unclear,0.0163
+CE102,PROF006,5,assignments were well structured and helped reinforce learning,0.9997
+CE102,PROF013,6,assignments were well structured and helped reinforce learning,0.9997
+CE102,PROF013,6,professor is very approachable and always ready to help students,0.9998
+CE102,PROF013,6,the course content was relevant and up to date with industry trends,0.9997
+CE102,PROF013,6,professor is very approachable and always ready to help students,0.9998
+CE201,PROF020,1,assignments were too difficult and not related to what was taught,0.0005
+CE201,PROF020,1,some topics were skipped due to time constraints,0.0024
+CE201,PROF020,1,course organization was average slides were not always up to date,0.0021
+CE201,PROF022,2,the professor s real world examples made the subject very interesting,0.9998
+CE201,PROF022,2,one of the best courses i have taken highly interactive sessions,0.9997
+CE201,PROF022,2,the course content was relevant and up to date with industry trends,0.9997
+CE201,PROF013,3,average course content was okay but could have been more detailed,0.0097
+CE201,PROF013,3,the course was decent assignments could be more challenging,0.9862
+CE201,PROF013,3,average course content was okay but could have been more detailed,0.0097
+CE201,PROF013,3,professor is very approachable and always ready to help students,0.9998
+CE201,PROF013,3,the professor s real world examples made the subject very interesting,0.9998
+CE201,PROF013,3,the professor was often unavailable outside of class hours,0.0021
+CE201,PROF013,3,the course was decent assignments could be more challenging,0.9862
+CE201,PROF013,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE201,PROF013,4,professor is very approachable and always ready to help students,0.9998
+CE201,PROF013,4,one of the best courses i have taken highly interactive sessions,0.9997
+CE201,PROF013,4,the course was decent assignments could be more challenging,0.9862
+CE201,PROF013,4,course organization was average slides were not always up to date,0.0021
+CE201,PROF013,4,average course content was okay but could have been more detailed,0.0097
+CE201,PROF013,4,professor is very approachable and always ready to help students,0.9998
+CE201,PROF013,4,the course was decent assignments could be more challenging,0.9862
+CE201,PROF013,4,the professor s real world examples made the subject very interesting,0.9998
+CE201,PROF029,5,excellent teaching style made difficult topics easy to understand,0.9989
+CE201,PROF029,5,course organization was average slides were not always up to date,0.0021
+CE201,PROF029,5,the course content was relevant and up to date with industry trends,0.9997
+CE201,PROF029,5,assignments were well structured and helped reinforce learning,0.9997
+CE201,PROF029,5,course organization was average slides were not always up to date,0.0021
+CE201,PROF029,5,course organization was average slides were not always up to date,0.0021
+CE201,PROF023,6,the professor was often unavailable outside of class hours,0.0021
+CE201,PROF023,6,poor course structure topics were taught out of order,0.0002
+CE201,PROF023,6,assignments were well structured and helped reinforce learning,0.9997
+CE201,PROF023,6,average course content was okay but could have been more detailed,0.0097
+CE201,PROF023,6,the professor was often unavailable outside of class hours,0.0021
+CE202,PROF002,1,professor is very approachable and always ready to help students,0.9998
+CE202,PROF002,1,some topics were skipped due to time constraints,0.0024
+CE202,PROF002,1,very well organized course with clear learning outcomes,0.9999
+CE202,PROF002,1,the course content was relevant and up to date with industry trends,0.9997
+CE202,PROF016,2,assignments were well structured and helped reinforce learning,0.9997
+CE202,PROF016,2,some topics were skipped due to time constraints,0.0024
+CE202,PROF016,2,very disappointing course expected much more depth,0.0005
+CE202,PROF016,2,the professor was often unavailable outside of class hours,0.0021
+CE202,PROF016,2,professor was okay explanations were sometimes unclear,0.0163
+CE202,PROF009,3,the professor s real world examples made the subject very interesting,0.9998
+CE202,PROF009,3,the professor was often unavailable outside of class hours,0.0021
+CE202,PROF009,3,the course content was relevant and up to date with industry trends,0.9997
+CE202,PROF009,3,the professor s real world examples made the subject very interesting,0.9998
+CE202,PROF009,3,one of the best courses i have taken highly interactive sessions,0.9997
+CE202,PROF009,3,assignments were well structured and helped reinforce learning,0.9997
+CE202,PROF012,4,the content felt outdated and not relevant to current practices,0.0002
+CE202,PROF012,4,very boring lectures professor reads directly from slides,0.0006
+CE202,PROF012,4,the professor was often unavailable outside of class hours,0.0021
+CE202,PROF012,4,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE202,PROF012,4,course organization was average slides were not always up to date,0.0021
+CE202,PROF012,4,assignments were too difficult and not related to what was taught,0.0005
+CE202,PROF012,4,the professor was often unavailable outside of class hours,0.0021
+CE202,PROF012,4,very disappointing course expected much more depth,0.0005
+CE202,PROF011,5,average course content was okay but could have been more detailed,0.0097
+CE202,PROF011,5,very disappointing course expected much more depth,0.0005
+CE202,PROF011,5,very boring lectures professor reads directly from slides,0.0006
+CE202,PROF011,5,very engaging lectures the professor explains concepts clearly,0.9998
+CE202,PROF011,5,very engaging lectures the professor explains concepts clearly,0.9998
+CE202,PROF011,5,course organization was average slides were not always up to date,0.0021
+CE202,PROF011,5,the content felt outdated and not relevant to current practices,0.0002
+CE202,PROF011,5,poor course structure topics were taught out of order,0.0002
+CE202,PROF026,6,assignments were too difficult and not related to what was taught,0.0005
+CE202,PROF026,6,average course content was okay but could have been more detailed,0.0097
+CE202,PROF026,6,course organization was average slides were not always up to date,0.0021
+CE202,PROF026,6,the course content was relevant and up to date with industry trends,0.9997
+CE202,PROF026,6,the professor s real world examples made the subject very interesting,0.9998
+CE202,PROF026,6,some topics were skipped due to time constraints,0.0024
+CE202,PROF026,6,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE301,PROF010,1,very well organized course with clear learning outcomes,0.9999
+CE301,PROF010,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE301,PROF010,1,the course content was relevant and up to date with industry trends,0.9997
+CE301,PROF010,1,assignments were well structured and helped reinforce learning,0.9997
+CE301,PROF010,1,the professor s real world examples made the subject very interesting,0.9998
+CE301,PROF027,2,one of the best courses i have taken highly interactive sessions,0.9997
+CE301,PROF027,2,professor was okay explanations were sometimes unclear,0.0163
+CE301,PROF027,2,excellent teaching style made difficult topics easy to understand,0.9989
+CE301,PROF027,2,the content felt outdated and not relevant to current practices,0.0002
+CE301,PROF027,2,very engaging lectures the professor explains concepts clearly,0.9998
+CE301,PROF027,2,professor is very approachable and always ready to help students,0.9998
+CE301,PROF027,2,assignments were well structured and helped reinforce learning,0.9997
+CE301,PROF028,3,assignments were well structured and helped reinforce learning,0.9997
+CE301,PROF028,3,professor was okay explanations were sometimes unclear,0.0163
+CE301,PROF028,3,assignments were well structured and helped reinforce learning,0.9997
+CE301,PROF028,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE301,PROF028,3,assignments were well structured and helped reinforce learning,0.9997
+CE301,PROF028,3,some topics were skipped due to time constraints,0.0024
+CE301,PROF028,3,the professor s real world examples made the subject very interesting,0.9998
+CE301,PROF022,4,average course content was okay but could have been more detailed,0.0097
+CE301,PROF022,4,professor is very approachable and always ready to help students,0.9998
+CE301,PROF022,4,the professor s real world examples made the subject very interesting,0.9998
+CE301,PROF022,4,professor is very approachable and always ready to help students,0.9998
+CE301,PROF022,4,very boring lectures professor reads directly from slides,0.0006
+CE301,PROF028,5,excellent teaching style made difficult topics easy to understand,0.9989
+CE301,PROF028,5,professor is very approachable and always ready to help students,0.9998
+CE301,PROF028,5,average course content was okay but could have been more detailed,0.0097
+CE301,PROF028,5,professor is very approachable and always ready to help students,0.9998
+CE301,PROF028,5,excellent teaching style made difficult topics easy to understand,0.9989
+CE301,PROF005,6,the professor s real world examples made the subject very interesting,0.9998
+CE301,PROF005,6,the professor s real world examples made the subject very interesting,0.9998
+CE301,PROF005,6,very boring lectures professor reads directly from slides,0.0006
+CE301,PROF005,6,average course content was okay but could have been more detailed,0.0097
+CE301,PROF005,6,excellent teaching style made difficult topics easy to understand,0.9989
+CE301,PROF005,6,very boring lectures professor reads directly from slides,0.0006
+CE302,PROF024,1,course organization was average slides were not always up to date,0.0021
+CE302,PROF024,1,the course content was relevant and up to date with industry trends,0.9997
+CE302,PROF024,1,the course content was relevant and up to date with industry trends,0.9997
+CE302,PROF024,1,course organization was average slides were not always up to date,0.0021
+CE302,PROF024,1,assignments were well structured and helped reinforce learning,0.9997
+CE302,PROF024,1,poor course structure topics were taught out of order,0.0002
+CE302,PROF024,1,some topics were skipped due to time constraints,0.0024
+CE302,PROF024,1,very well organized course with clear learning outcomes,0.9999
+CE302,PROF025,2,one of the best courses i have taken highly interactive sessions,0.9997
+CE302,PROF025,2,course organization was average slides were not always up to date,0.0021
+CE302,PROF025,2,the professor was often unavailable outside of class hours,0.0021
+CE302,PROF025,2,professor was okay explanations were sometimes unclear,0.0163
+CE302,PROF025,2,professor is very approachable and always ready to help students,0.9998
+CE302,PROF011,3,poor course structure topics were taught out of order,0.0002
+CE302,PROF011,3,the professor was often unavailable outside of class hours,0.0021
+CE302,PROF011,3,the professor was often unavailable outside of class hours,0.0021
+CE302,PROF011,3,professor was okay explanations were sometimes unclear,0.0163
+CE302,PROF011,3,professor was okay explanations were sometimes unclear,0.0163
+CE302,PROF011,3,the content felt outdated and not relevant to current practices,0.0002
+CE302,PROF011,3,average course content was okay but could have been more detailed,0.0097
+CE302,PROF024,4,assignments were well structured and helped reinforce learning,0.9997
+CE302,PROF024,4,professor was okay explanations were sometimes unclear,0.0163
+CE302,PROF024,4,assignments were well structured and helped reinforce learning,0.9997
+CE302,PROF024,4,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE302,PROF024,4,average course content was okay but could have been more detailed,0.0097
+CE302,PROF024,4,the content felt outdated and not relevant to current practices,0.0002
+CE302,PROF024,4,some topics were skipped due to time constraints,0.0024
+CE302,PROF020,5,professor is very approachable and always ready to help students,0.9998
+CE302,PROF020,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+CE302,PROF020,5,assignments were too difficult and not related to what was taught,0.0005
+CE302,PROF020,5,assignments were too difficult and not related to what was taught,0.0005
+CE302,PROF020,5,the course was decent assignments could be more challenging,0.9862
+CE302,PROF003,6,some topics were skipped due to time constraints,0.0024
+CE302,PROF003,6,very boring lectures professor reads directly from slides,0.0006
+CE302,PROF003,6,some topics were skipped due to time constraints,0.0024
+CE302,PROF003,6,assignments were too difficult and not related to what was taught,0.0005
+CE302,PROF003,6,poor course structure topics were taught out of order,0.0002
+CE302,PROF003,6,excellent teaching style made difficult topics easy to understand,0.9989
+CE302,PROF003,6,some topics were skipped due to time constraints,0.0024
+EEE101,PROF015,1,the professor s real world examples made the subject very interesting,0.9998
+EEE101,PROF015,1,some topics were skipped due to time constraints,0.0024
+EEE101,PROF015,1,poor course structure topics were taught out of order,0.0002
+EEE101,PROF030,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE101,PROF030,2,the content felt outdated and not relevant to current practices,0.0002
+EEE101,PROF030,2,assignments were well structured and helped reinforce learning,0.9997
+EEE101,PROF030,2,very disappointing course expected much more depth,0.0005
+EEE101,PROF030,2,very well organized course with clear learning outcomes,0.9999
+EEE101,PROF030,2,very boring lectures professor reads directly from slides,0.0006
+EEE101,PROF014,3,very boring lectures professor reads directly from slides,0.0006
+EEE101,PROF014,3,assignments were too difficult and not related to what was taught,0.0005
+EEE101,PROF014,3,the content felt outdated and not relevant to current practices,0.0002
+EEE101,PROF014,3,the content felt outdated and not relevant to current practices,0.0002
+EEE101,PROF016,4,assignments were too difficult and not related to what was taught,0.0005
+EEE101,PROF016,4,some topics were skipped due to time constraints,0.0024
+EEE101,PROF016,4,the content felt outdated and not relevant to current practices,0.0002
+EEE101,PROF016,4,average course content was okay but could have been more detailed,0.0097
+EEE101,PROF017,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE101,PROF017,5,very boring lectures professor reads directly from slides,0.0006
+EEE101,PROF017,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE101,PROF017,5,the professor was often unavailable outside of class hours,0.0021
+EEE101,PROF017,5,assignments were too difficult and not related to what was taught,0.0005
+EEE101,PROF017,5,the content felt outdated and not relevant to current practices,0.0002
+EEE101,PROF017,5,very well organized course with clear learning outcomes,0.9999
+EEE101,PROF012,6,course organization was average slides were not always up to date,0.0021
+EEE101,PROF012,6,very disappointing course expected much more depth,0.0005
+EEE101,PROF012,6,very boring lectures professor reads directly from slides,0.0006
+EEE101,PROF012,6,some topics were skipped due to time constraints,0.0024
+EEE101,PROF012,6,very disappointing course expected much more depth,0.0005
+EEE101,PROF012,6,very disappointing course expected much more depth,0.0005
+EEE101,PROF012,6,the professor was often unavailable outside of class hours,0.0021
+EEE102,PROF002,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE102,PROF002,1,poor course structure topics were taught out of order,0.0002
+EEE102,PROF002,1,course organization was average slides were not always up to date,0.0021
+EEE102,PROF026,2,poor course structure topics were taught out of order,0.0002
+EEE102,PROF026,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE102,PROF026,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE102,PROF026,2,very well organized course with clear learning outcomes,0.9999
+EEE102,PROF026,2,course organization was average slides were not always up to date,0.0021
+EEE102,PROF026,2,assignments were too difficult and not related to what was taught,0.0005
+EEE102,PROF003,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE102,PROF003,3,the course content was relevant and up to date with industry trends,0.9997
+EEE102,PROF003,3,assignments were too difficult and not related to what was taught,0.0005
+EEE102,PROF003,3,excellent teaching style made difficult topics easy to understand,0.9989
+EEE102,PROF003,3,the professor s real world examples made the subject very interesting,0.9998
+EEE102,PROF003,3,the content felt outdated and not relevant to current practices,0.0002
+EEE102,PROF003,3,the content felt outdated and not relevant to current practices,0.0002
+EEE102,PROF023,4,assignments were too difficult and not related to what was taught,0.0005
+EEE102,PROF023,4,poor course structure topics were taught out of order,0.0002
+EEE102,PROF023,4,professor was okay explanations were sometimes unclear,0.0163
+EEE102,PROF013,5,one of the best courses i have taken highly interactive sessions,0.9997
+EEE102,PROF013,5,average course content was okay but could have been more detailed,0.0097
+EEE102,PROF013,5,assignments were too difficult and not related to what was taught,0.0005
+EEE102,PROF013,5,course organization was average slides were not always up to date,0.0021
+EEE102,PROF025,6,very disappointing course expected much more depth,0.0005
+EEE102,PROF025,6,professor was okay explanations were sometimes unclear,0.0163
+EEE102,PROF025,6,assignments were too difficult and not related to what was taught,0.0005
+EEE102,PROF025,6,the content felt outdated and not relevant to current practices,0.0002
+EEE102,PROF025,6,very boring lectures professor reads directly from slides,0.0006
+EEE102,PROF025,6,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE102,PROF025,6,professor was okay explanations were sometimes unclear,0.0163
+EEE201,PROF017,1,course organization was average slides were not always up to date,0.0021
+EEE201,PROF017,1,very boring lectures professor reads directly from slides,0.0006
+EEE201,PROF017,1,course organization was average slides were not always up to date,0.0021
+EEE201,PROF017,1,one of the best courses i have taken highly interactive sessions,0.9997
+EEE201,PROF017,1,very boring lectures professor reads directly from slides,0.0006
+EEE201,PROF017,1,the professor s real world examples made the subject very interesting,0.9998
+EEE201,PROF017,1,very disappointing course expected much more depth,0.0005
+EEE201,PROF019,2,course organization was average slides were not always up to date,0.0021
+EEE201,PROF019,2,the content felt outdated and not relevant to current practices,0.0002
+EEE201,PROF019,2,average course content was okay but could have been more detailed,0.0097
+EEE201,PROF019,2,very disappointing course expected much more depth,0.0005
+EEE201,PROF006,3,poor course structure topics were taught out of order,0.0002
+EEE201,PROF006,3,very well organized course with clear learning outcomes,0.9999
+EEE201,PROF006,3,excellent teaching style made difficult topics easy to understand,0.9989
+EEE201,PROF006,3,very engaging lectures the professor explains concepts clearly,0.9998
+EEE201,PROF006,3,very well organized course with clear learning outcomes,0.9999
+EEE201,PROF006,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE201,PROF006,3,the professor s real world examples made the subject very interesting,0.9998
+EEE201,PROF006,3,very well organized course with clear learning outcomes,0.9999
+EEE201,PROF029,4,one of the best courses i have taken highly interactive sessions,0.9997
+EEE201,PROF029,4,poor course structure topics were taught out of order,0.0002
+EEE201,PROF029,4,assignments were too difficult and not related to what was taught,0.0005
+EEE201,PROF029,4,the course content was relevant and up to date with industry trends,0.9997
+EEE201,PROF029,4,professor was okay explanations were sometimes unclear,0.0163
+EEE201,PROF007,5,one of the best courses i have taken highly interactive sessions,0.9997
+EEE201,PROF007,5,the course content was relevant and up to date with industry trends,0.9997
+EEE201,PROF007,5,very well organized course with clear learning outcomes,0.9999
+EEE201,PROF007,5,the course content was relevant and up to date with industry trends,0.9997
+EEE201,PROF002,6,very boring lectures professor reads directly from slides,0.0006
+EEE201,PROF002,6,some topics were skipped due to time constraints,0.0024
+EEE201,PROF002,6,very disappointing course expected much more depth,0.0005
+EEE201,PROF002,6,very boring lectures professor reads directly from slides,0.0006
+EEE202,PROF002,1,one of the best courses i have taken highly interactive sessions,0.9997
+EEE202,PROF002,1,the content felt outdated and not relevant to current practices,0.0002
+EEE202,PROF002,1,very boring lectures professor reads directly from slides,0.0006
+EEE202,PROF002,1,professor was okay explanations were sometimes unclear,0.0163
+EEE202,PROF002,1,professor is very approachable and always ready to help students,0.9998
+EEE202,PROF002,1,very disappointing course expected much more depth,0.0005
+EEE202,PROF002,1,the professor was often unavailable outside of class hours,0.0021
+EEE202,PROF002,2,the course was decent assignments could be more challenging,0.9862
+EEE202,PROF002,2,average course content was okay but could have been more detailed,0.0097
+EEE202,PROF002,2,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE202,PROF002,2,poor course structure topics were taught out of order,0.0002
+EEE202,PROF002,2,some topics were skipped due to time constraints,0.0024
+EEE202,PROF002,2,course organization was average slides were not always up to date,0.0021
+EEE202,PROF012,3,the professor was often unavailable outside of class hours,0.0021
+EEE202,PROF012,3,the content felt outdated and not relevant to current practices,0.0002
+EEE202,PROF012,3,professor was okay explanations were sometimes unclear,0.0163
+EEE202,PROF012,3,the content felt outdated and not relevant to current practices,0.0002
+EEE202,PROF012,3,the professor was often unavailable outside of class hours,0.0021
+EEE202,PROF007,4,the course content was relevant and up to date with industry trends,0.9997
+EEE202,PROF007,4,very well organized course with clear learning outcomes,0.9999
+EEE202,PROF007,4,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE202,PROF007,4,very well organized course with clear learning outcomes,0.9999
+EEE202,PROF007,4,course organization was average slides were not always up to date,0.0021
+EEE202,PROF007,4,the content felt outdated and not relevant to current practices,0.0002
+EEE202,PROF007,4,the professor s real world examples made the subject very interesting,0.9998
+EEE202,PROF012,5,the course was decent assignments could be more challenging,0.9862
+EEE202,PROF012,5,the content felt outdated and not relevant to current practices,0.0002
+EEE202,PROF012,5,the content felt outdated and not relevant to current practices,0.0002
+EEE202,PROF012,5,poor course structure topics were taught out of order,0.0002
+EEE202,PROF015,6,the course was decent assignments could be more challenging,0.9862
+EEE202,PROF015,6,excellent teaching style made difficult topics easy to understand,0.9989
+EEE202,PROF015,6,very well organized course with clear learning outcomes,0.9999
+EEE202,PROF015,6,assignments were well structured and helped reinforce learning,0.9997
+EEE202,PROF015,6,one of the best courses i have taken highly interactive sessions,0.9997
+EEE301,PROF013,1,professor is very approachable and always ready to help students,0.9998
+EEE301,PROF013,1,the professor s real world examples made the subject very interesting,0.9998
+EEE301,PROF013,1,some topics were skipped due to time constraints,0.0024
+EEE301,PROF013,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE301,PROF013,1,average course content was okay but could have been more detailed,0.0097
+EEE301,PROF013,1,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE301,PROF013,1,the content felt outdated and not relevant to current practices,0.0002
+EEE301,PROF013,1,professor was okay explanations were sometimes unclear,0.0163
+EEE301,PROF030,2,very engaging lectures the professor explains concepts clearly,0.9998
+EEE301,PROF030,2,assignments were well structured and helped reinforce learning,0.9997
+EEE301,PROF030,2,very well organized course with clear learning outcomes,0.9999
+EEE301,PROF030,2,very disappointing course expected much more depth,0.0005
+EEE301,PROF030,2,very engaging lectures the professor explains concepts clearly,0.9998
+EEE301,PROF022,3,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE301,PROF022,3,professor was okay explanations were sometimes unclear,0.0163
+EEE301,PROF022,3,course organization was average slides were not always up to date,0.0021
+EEE301,PROF008,4,very boring lectures professor reads directly from slides,0.0006
+EEE301,PROF008,4,average course content was okay but could have been more detailed,0.0097
+EEE301,PROF008,4,the course content was relevant and up to date with industry trends,0.9997
+EEE301,PROF008,4,professor is very approachable and always ready to help students,0.9998
+EEE301,PROF008,4,the course was decent assignments could be more challenging,0.9862
+EEE301,PROF008,4,very boring lectures professor reads directly from slides,0.0006
+EEE301,PROF016,5,average course content was okay but could have been more detailed,0.0097
+EEE301,PROF016,5,very disappointing course expected much more depth,0.0005
+EEE301,PROF016,5,professor was okay explanations were sometimes unclear,0.0163
+EEE301,PROF016,5,very well organized course with clear learning outcomes,0.9999
+EEE301,PROF016,5,the course content was relevant and up to date with industry trends,0.9997
+EEE301,PROF016,5,very engaging lectures the professor explains concepts clearly,0.9998
+EEE301,PROF016,5,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE301,PROF015,6,professor was okay explanations were sometimes unclear,0.0163
+EEE301,PROF015,6,professor was okay explanations were sometimes unclear,0.0163
+EEE301,PROF015,6,very boring lectures professor reads directly from slides,0.0006
+EEE301,PROF015,6,assignments were too difficult and not related to what was taught,0.0005
+EEE301,PROF015,6,some topics were skipped due to time constraints,0.0024
+EEE301,PROF015,6,the content felt outdated and not relevant to current practices,0.0002
+EEE301,PROF015,6,the professor was often unavailable outside of class hours,0.0021
+EEE301,PROF015,6,assignments were too difficult and not related to what was taught,0.0005
+EEE302,PROF028,1,course organization was average slides were not always up to date,0.0021
+EEE302,PROF028,1,professor is very approachable and always ready to help students,0.9998
+EEE302,PROF028,1,course organization was average slides were not always up to date,0.0021
+EEE302,PROF019,2,very disappointing course expected much more depth,0.0005
+EEE302,PROF019,2,very boring lectures professor reads directly from slides,0.0006
+EEE302,PROF019,2,the professor was often unavailable outside of class hours,0.0021
+EEE302,PROF019,2,assignments were too difficult and not related to what was taught,0.0005
+EEE302,PROF012,3,very engaging lectures the professor explains concepts clearly,0.9998
+EEE302,PROF012,3,assignments were well structured and helped reinforce learning,0.9997
+EEE302,PROF012,3,one of the best courses i have taken highly interactive sessions,0.9997
+EEE302,PROF012,3,the course content was relevant and up to date with industry trends,0.9997
+EEE302,PROF012,3,very well organized course with clear learning outcomes,0.9999
+EEE302,PROF012,3,the professor was often unavailable outside of class hours,0.0021
+EEE302,PROF012,3,very well organized course with clear learning outcomes,0.9999
+EEE302,PROF012,3,very well organized course with clear learning outcomes,0.9999
+EEE302,PROF006,4,professor is very approachable and always ready to help students,0.9998
+EEE302,PROF006,4,course organization was average slides were not always up to date,0.0021
+EEE302,PROF006,4,average course content was okay but could have been more detailed,0.0097
+EEE302,PROF006,4,one of the best courses i have taken highly interactive sessions,0.9997
+EEE302,PROF006,4,average course content was okay but could have been more detailed,0.0097
+EEE302,PROF006,4,the course content was relevant and up to date with industry trends,0.9997
+EEE302,PROF006,4,excellent teaching style made difficult topics easy to understand,0.9989
+EEE302,PROF029,5,the professor was often unavailable outside of class hours,0.0021
+EEE302,PROF029,5,assignments were too difficult and not related to what was taught,0.0005
+EEE302,PROF029,5,the content felt outdated and not relevant to current practices,0.0002
+EEE302,PROF029,5,assignments were too difficult and not related to what was taught,0.0005
+EEE302,PROF029,5,the professor s real world examples made the subject very interesting,0.9998
+EEE302,PROF024,6,the content felt outdated and not relevant to current practices,0.0002
+EEE302,PROF024,6,average course content was okay but could have been more detailed,0.0097
+EEE302,PROF024,6,the course was decent assignments could be more challenging,0.9862
+EEE302,PROF024,6,lectures were fine nothing extraordinary but covered the syllabus,0.588
+EEE302,PROF024,6,poor course structure topics were taught out of order,0.0002
+EEE302,PROF024,6,course organization was average slides were not always up to date,0.0021
