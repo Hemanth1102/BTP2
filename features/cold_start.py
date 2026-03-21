@@ -29,6 +29,8 @@ Usage:
   similar = handler.find_similar_oes(oe_id, top_k=5)
 """
 
+import os
+import joblib
 import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
@@ -68,7 +70,8 @@ class ColdStartHandler:
         # Scaled feature matrices for similarity search
         self._student_matrix = None
         self._oe_matrix      = None
-        self._scaler_student = MinMaxScaler()
+        # Use shared scaler from feature_engineering (same scale as model input)
+        self._scaler_student = None
         self._scaler_oe      = MinMaxScaler()
 
     # ─────────────────────────────────────────────────────────
@@ -82,6 +85,15 @@ class ColdStartHandler:
         self.interaction_matrix_df = pd.read_csv(f"{self.processed_dir}/interaction_matrix.csv")
         self.students_df           = pd.read_csv(f"{self.raw_dir}/students.csv")
         self.oe_info_df            = pd.read_csv(f"{self.raw_dir}/oe_info.csv")
+
+        # Load shared student scaler from feature engineering
+        scaler_path = f"{self.processed_dir}/student_scaler.pkl"
+        if os.path.exists(scaler_path):
+            self._scaler_student = joblib.load(scaler_path)
+            print(f"  Loaded student scaler from {scaler_path}")
+        else:
+            print(f"  Warning: student_scaler.pkl not found, using new MinMaxScaler")
+            self._scaler_student = MinMaxScaler()
 
         self._build_student_matrix()
         self._build_oe_matrix()
@@ -99,12 +111,16 @@ class ColdStartHandler:
         Build scaled numeric matrix for student similarity.
         Uses: branch OHE, cgpa, avg_core_grade, sem1-4 averages
         """
-        student_cols = (
-            [c for c in self.student_features_df.columns if c.startswith("branch_")] +
-            ["cgpa", "avg_core_grade", "sem1_avg", "sem2_avg", "sem3_avg", "sem4_avg"]
-        )
-        matrix = self.student_features_df[student_cols].values.astype(float)
-        self._student_matrix = self._scaler_student.fit_transform(matrix)
+        branch_cols = [c for c in self.student_features_df.columns if c.startswith("branch_")]
+        cont_cols   = ["cgpa", "avg_core_grade", "sem1_avg", "sem2_avg", "sem3_avg", "sem4_avg"]
+        student_cols = branch_cols + cont_cols
+
+        df = self.student_features_df[student_cols].copy()
+
+        # Scaler was fitted on continuous columns only — transform those separately
+        df[cont_cols] = self._scaler_student.transform(df[cont_cols])
+
+        self._student_matrix = df.values.astype(float)
 
     def _build_oe_matrix(self):
         """

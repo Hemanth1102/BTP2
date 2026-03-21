@@ -31,6 +31,7 @@ from pydantic        import BaseModel
 from typing          import List, Optional
 from datetime        import datetime
 
+import joblib
 from model.dataset  import OEDataset, STUDENT_FEATURE_COLS, OE_FEATURE_COLS
 from model.neumf    import NeuMF
 from model.train    import load_checkpoint, EMBEDDING_DIM, MLP_LAYERS, DROPOUT_RATE
@@ -100,6 +101,7 @@ class ModelLoader:
         self.cold_start       = None
         self.checkpoint_path  = None
         self.checkpoint_info  = {}
+        self.student_scaler   = None
 
     def load(self):
         print("Loading model and data...")
@@ -151,6 +153,14 @@ class ModelLoader:
         self.students_df    = pd.read_csv(f"{RAW_DIR}/students.csv")
         self.oe_info_df     = pd.read_csv(f"{RAW_DIR}/oe_info.csv")
         self.interaction_df = pd.read_csv(f"{PROCESSED_DIR}/interaction_matrix.csv")
+
+        # Load student scaler from feature engineering
+        scaler_path = f"{PROCESSED_DIR}/student_scaler.pkl"
+        if os.path.exists(scaler_path):
+            self.student_scaler = joblib.load(scaler_path)
+            print(f"  Scaler loaded from {scaler_path}")
+        else:
+            print(f"  Warning: student_scaler.pkl not found — features not normalized")
 
         # Cold start handler
         self.cold_start = ColdStartHandler()
@@ -218,9 +228,19 @@ def score_oes(student_id   : str,
         raise HTTPException(status_code=404,
                             detail=f"Student features not found for '{student_id}'")
 
-    student_vec = torch.tensor(
-        loader.student_lookup[student_id], dtype=torch.float32
-    ).unsqueeze(0).to(loader.device)
+    # Apply same normalization used during training
+    raw_vec = loader.student_lookup[student_id].copy()
+    if loader.student_scaler is not None:
+        from model.dataset import STUDENT_FEATURE_COLS
+        branch_cols = [c for c in STUDENT_FEATURE_COLS if c.startswith("branch_")]
+        cont_cols   = [c for c in STUDENT_FEATURE_COLS if not c.startswith("branch_")]
+        cont_idx    = [STUDENT_FEATURE_COLS.index(c) for c in cont_cols]
+        import numpy as np
+        raw_vec[cont_idx] = loader.student_scaler.transform(
+            raw_vec[cont_idx].reshape(1, -1)
+        ).flatten()
+
+    student_vec = torch.tensor(raw_vec, dtype=torch.float32).unsqueeze(0).to(loader.device)
 
     scored = []
     with torch.no_grad():
@@ -349,4 +369,161 @@ def student_profile(student_id: str):
         "cgpa"       : float(student["cgpa"]),
         "batch_year" : int(student["batch_year"]),
         "oe_history" : history,
+    }
+
+
+@app.get("/explain/{student_id}/{oe_id}")
+def explain(student_id: str, oe_id: str, semester: int = 5):
+    """
+    Explain why a specific OE was ranked where it was for a student.
+
+    Uses SHAP values to show the contribution of each feature
+    to the predicted relevance score.
+
+    Example:
+      GET /explain/STU0001/ME_OE501_Robotics?semester=5
+
+    Returns:
+      predicted_score   : model's relevance score for this OE
+      feature_contributions : each feature's SHAP contribution
+      top_reasons       : top 3 human-readable reasons
+      bottom_reasons    : bottom 3 factors pulling score down
+    """
+    import shap
+    import numpy as np
+    from model.dataset import STUDENT_FEATURE_COLS, OE_FEATURE_COLS
+
+    # Validate student and OE exist
+    student = get_student(student_id)
+    branch  = student["branch"]
+
+    oe_row  = loader.oe_info_df[loader.oe_info_df["oe_id"] == oe_id]
+    if oe_row.empty:
+        raise HTTPException(status_code=404,
+                            detail=f"OE '{oe_id}' not found")
+
+    if student_id not in loader.student_lookup:
+        raise HTTPException(status_code=404,
+                            detail=f"Student features not found for '{student_id}'")
+
+    if oe_id not in loader.oe_lookup:
+        raise HTTPException(status_code=404,
+                            detail=f"OE features not found for '{oe_id}'")
+
+    # Get feature vectors
+    student_vec_np = loader.student_lookup[student_id]   # shape (11,)
+    oe_vec_np      = loader.oe_lookup[oe_id]             # shape (14,)
+
+    # Combined vector for SHAP: [student || oe]
+    combined       = np.concatenate([student_vec_np, oe_vec_np]).reshape(1, -1)
+    all_feat_names = STUDENT_FEATURE_COLS + OE_FEATURE_COLS
+
+    # Predicted score
+    student_tensor = torch.tensor(student_vec_np, dtype=torch.float32) \
+                         .unsqueeze(0).to(loader.device)
+    oe_tensor      = torch.tensor(oe_vec_np, dtype=torch.float32) \
+                         .unsqueeze(0).to(loader.device)
+
+    with torch.no_grad():
+        predicted_score = loader.model(student_tensor, oe_tensor).item()
+
+    # SHAP explanation
+    # Build background dataset from a sample of students in the lookup
+    sample_ids  = list(loader.student_lookup.keys())[:30]
+    oe_ids      = list(loader.oe_lookup.keys())[:30]
+
+    background = np.array([
+        np.concatenate([loader.student_lookup[s], loader.oe_lookup[o]])
+        for s, o in zip(sample_ids, oe_ids)
+    ])
+
+    # Model wrapper for SHAP
+    def model_predict(x: np.ndarray) -> np.ndarray:
+        x_tensor = torch.tensor(x, dtype=torch.float32).to(loader.device)
+        s_dim    = len(STUDENT_FEATURE_COLS)
+        s_vec    = x_tensor[:, :s_dim]
+        o_vec    = x_tensor[:, s_dim:]
+        with torch.no_grad():
+            scores = loader.model(s_vec, o_vec)
+        return scores.cpu().numpy()
+
+    explainer   = shap.KernelExplainer(model_predict, background)
+    shap_values = explainer.shap_values(combined, nsamples=100)
+
+    # shap_values shape can be (1, n_features) or (1, n_features, 1)
+    if isinstance(shap_values, list):
+        shap_vals = np.array(shap_values[0]).flatten()
+    else:
+        shap_vals = np.array(shap_values).flatten()
+
+    # Build feature contribution dict
+    contributions = {
+        name: round(float(val), 4)
+        for name, val in zip(all_feat_names, shap_vals)
+    }
+
+    # Sort by absolute contribution
+    sorted_contribs = sorted(
+        contributions.items(),
+        key=lambda x: abs(x[1]),
+        reverse=True
+    )
+
+    # Human readable labels
+    readable_map = {
+        "cgpa"                          : "Your CGPA",
+        "avg_core_grade"                : "Your overall core course average",
+        "sem1_avg"                      : "Your semester 1 average",
+        "sem2_avg"                      : "Your semester 2 average",
+        "sem3_avg"                      : "Your semester 3 average",
+        "sem4_avg"                      : "Your semester 4 average",
+        "branch_CSE"                    : "OE is offered by CSE branch",
+        "branch_ECE"                    : "OE is offered by ECE branch",
+        "branch_ME"                     : "OE is offered by ME branch",
+        "branch_CE"                     : "OE is offered by CE branch",
+        "branch_EEE"                    : "OE is offered by EEE branch",
+        "oe_avg_teaching_clarity"       : "Professor teaching clarity",
+        "oe_avg_course_organization"    : "Professor course organization",
+        "oe_avg_overall_rating"         : "Professor overall rating",
+        "oe_avg_interaction"            : "Professor student interaction",
+        "oe_avg_assignment_usefulness"  : "Assignment usefulness",
+        "sentiment_score"               : "Student sentiment about professor",
+        "is_new_oe"                     : "OE is newly introduced",
+        "is_new_prof"                   : "Professor is new",
+        "available_semester"            : "Semester availability",
+    }
+
+    def make_readable(name: str, val: float) -> str:
+        label     = readable_map.get(name, name)
+        direction = "positively influences" if val >= 0 else "negatively influences"
+        strength  = abs(val)
+        if strength > 0.05:
+            impact = "strongly"
+        elif strength > 0.02:
+            impact = "moderately"
+        else:
+            impact = "slightly"
+        return f"{label} {impact} {direction} this recommendation ({val:+.4f})"
+
+    positive_contribs = [(n, v) for n, v in sorted_contribs if v > 0.001]
+    top_reasons       = [make_readable(n, v) for n, v in positive_contribs[:3]]
+    negative_contribs = sorted(
+        [(n, v) for n, v in contributions.items() if v < -0.001],
+        key=lambda x: x[1]
+    )
+    bottom_reasons = [make_readable(n, v) for n, v in negative_contribs[:3]]
+    if not top_reasons:
+        top_reasons = ["No strong positive signals found for this recommendation"]
+    if not bottom_reasons:
+        bottom_reasons = ["No features are negatively influencing this recommendation"]
+
+    return {
+        "student_id"          : student_id,
+        "oe_id"               : oe_id,
+        "semester"            : semester,
+        "predicted_score"     : round(predicted_score, 4),
+        "feature_contributions": contributions,
+        "top_reasons"         : top_reasons,
+        "bottom_reasons"      : bottom_reasons,
+        "generated_at"        : datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }

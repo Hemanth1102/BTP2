@@ -1,2 +1,2 @@
-semester,ndcg@10,hit@5,hit@10,rmse,n_students
-7,0.5873,1.0,1.0,0.6514,500
+semester,ndcg@10,hit@5,hit@10,rmse,avg_rank,total_candidates,n_students
+7,0.1481,0.166,0.318,0.6362,16.33,32,500

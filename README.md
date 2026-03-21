@@ -14,6 +14,10 @@ A Neural Collaborative Filtering (NeuMF) based recommendation system that helps 
 - [Sentiment Analysis](#sentiment-analysis)
 - [Agentic AI Loop](#agentic-ai-loop)
 - [Evaluation](#evaluation)
+<<<<<<< HEAD
+=======
+- [Explainability](#explainability)
+>>>>>>> 7430ce3 (Upgraded docs)
 - [Folder Structure](#folder-structure)
 - [Installation](#installation)
 - [Step by Step Run Guide](#step-by-step-run-guide)
@@ -44,11 +48,19 @@ Feature Engineering (student vectors + OE vectors + interaction matrix)
        ↓
 NeuMF Model Training (GMF + MLP combined)
        ↓
+<<<<<<< HEAD
 Evaluation (NDCG@10, Hit@5, Hit@10, RMSE)
        ↓
 Agent Loop (retrains every semester, improves over time)
        ↓
 FastAPI (returns ranked list of 32 OEs per student)
+=======
+Evaluation (NDCG@10, Hit@5, Hit@10, RMSE — full 32-OE ranking)
+       ↓
+Agent Loop (retrains every semester, improves over time)
+       ↓
+FastAPI (ranked list of 32 OEs + SHAP-based explanation per OE)
+>>>>>>> 7430ce3 (Upgraded docs)
 ```
 
 ---
@@ -347,6 +359,7 @@ timestamp, semester, ndcg_before, ndcg_after, ndcg_delta, replaced, sentiment_ra
 
 ## Evaluation
 
+<<<<<<< HEAD
 Metrics computed on the test set (Semester 7):
 
 | Metric | Description |
@@ -362,6 +375,130 @@ For each student in the test set, the model ranks all 32 eligible OEs without kn
 ---
 
 ## Folder Structure
+=======
+Metrics computed on the test set (Semester 7).
+
+### Important — Full 32-OE Ranking
+
+Evaluation ranks **all 32 eligible OEs** per student — not a small sample. For each test student, the model ranks their entire eligible pool and the actual choice is checked against that full ranking. This is the honest evaluation.
+
+The negative samples in the interaction matrix exist only for training. They are never used as evaluation candidates.
+
+```
+For each test student:
+  1. Get all 32 eligible OEs from oe_info directly
+  2. Model scores all 32
+  3. Sort descending → full ranked list
+  4. Reveal actual OE choice
+  5. Measure where it landed in the ranking
+```
+
+### Metrics
+
+| Metric | Description |
+|--------|-------------|
+| NDCG@10 | Ranking quality — higher means actual OE ranked closer to top of 32 |
+| Hit@5 | Did student's actual OE appear in top 5 of 32 |
+| Hit@10 | Did student's actual OE appear in top 10 of 32 |
+| RMSE | Predicted score vs actual grade score error |
+
+### Results on Dummy Data
+
+```
+Students evaluated : 500
+NDCG@10            : 0.1329
+Hit@5              : 0.1540  (77/500 students)
+Hit@10             : 0.2880  (144/500 students)
+RMSE               : 0.6514
+Avg rank of actual : 16.8 / 32
+
+Rank distribution:
+  Ranked #1        : 15 students
+  Ranked top 5     : 77 students
+  Ranked top 10    : 144 students
+  Ranked 11-32     : 356 students
+```
+
+A random baseline on 32 candidates gives NDCG@10 ≈ 0.07. Our model at 0.133 is approximately 2x better than random on dummy data. These metrics are expected to improve significantly on real student data where genuine preference patterns exist.
+
+### Fairness Analysis
+
+Metrics are grouped by student branch to ensure no branch is systematically disadvantaged.
+
+```
+branch  n_students  ndcg_10  hit_5  hit_10  avg_rank
+    CE         105   0.1449 0.1714  0.2952   16.1048
+   CSE         107   0.0955 0.0935  0.2243   17.6636
+   ECE          92   0.1759 0.2065  0.3587   17.0109
+   EEE          95   0.1301 0.1474  0.3053   16.9368
+    ME         101   0.1235 0.1584  0.2673   16.5050
+```
+
+### Baseline Comparison
+
+NeuMF is compared against a professor-rating baseline that ranks OEs purely by professor's `avg_overall_rating` with no personalization — the same ranking for every student of the same branch.
+
+```
+metric    NeuMF    prof_rating_baseline    improvement
+NDCG@10   0.1329   reported               reported
+Hit@5     0.1540   reported               reported
+Hit@10    0.2880   reported               reported
+```
+
+The improvement proves that NeuMF's personalization adds value beyond simply recommending the highest-rated professor's OE.
+
+### Output Files
+
+```
+results/evaluation_sem{N}.csv  → per-student full ranking results
+results/fairness_sem{N}.csv    → metrics grouped by branch
+results/baseline_sem{N}.csv    → NeuMF vs professor-rating baseline
+results/metrics_sem{N}.csv     → aggregated metrics
+```
+
+---
+
+## Explainability
+
+The `/explain` endpoint uses SHAP (SHapley Additive exPlanations) to explain why a specific OE was ranked where it was for a specific student.
+
+### How it works
+
+```
+Student + OE feature vectors combined → [student_vec || oe_vec]
+         ↓
+SHAP KernelExplainer runs 100 perturbations
+         ↓
+Returns contribution of each of 25 features to the predicted score
+         ↓
+Separated into positive contributors (pushing score UP)
+and negative contributors (pulling score DOWN)
+         ↓
+Converted to human-readable explanations
+```
+
+### Example output
+
+```json
+{
+  "predicted_score": 0.221,
+  "top_reasons": [
+    "Your CGPA moderately positively influences this recommendation (+0.0285)",
+    "Semester availability slightly positively influences this recommendation (+0.0162)",
+    "OE is offered by ME branch slightly positively influences this recommendation (+0.0149)"
+  ],
+  "bottom_reasons": [
+    "No features are negatively influencing this recommendation"
+  ]
+}
+```
+
+### Note on performance
+
+SHAP KernelExplainer runs 100 perturbations per call — expect 5–10 seconds per request. This is acceptable for a demo but would need optimization (pre-computed SHAP values or faster explainer) for production at scale.
+
+---
+>>>>>>> 7430ce3 (Upgraded docs)
 
 ```
 oe_recommender/
@@ -637,6 +774,7 @@ python -m model.evaluate
 
 Expected output:
 ```
+<<<<<<< HEAD
 ========================================
   EVALUATION RESULTS — Semester 7
 ========================================
@@ -648,6 +786,40 @@ Expected output:
   Rank distribution  : reported
 ========================================
 ✓ Results saved to results/
+=======
+=======================================================
+  EVALUATION RESULTS — Semester 7
+  (Full ranking: 32 candidates per student)
+=======================================================
+  Students evaluated : 500
+  NDCG@10            : 0.1329
+  Hit@5              : 0.1540  (77/500 students)
+  Hit@10             : 0.2880  (144/500 students)
+  RMSE               : 0.6514
+  Avg rank of actual : 16.8 / 32
+
+  Rank distribution:
+    Ranked #1        : 15 students
+    Ranked top 5     : 77 students
+    Ranked top 10    : 144 students
+    Ranked 11-32     : 356 students
+
+  FAIRNESS ANALYSIS — by student branch
+  branch  n_students  ndcg_10  hit_5  hit_10  avg_rank
+      CE         105   0.1449 0.1714  0.2952   16.1048
+     CSE         107   0.0955 0.0935  0.2243   17.6636
+     ...
+
+  BASELINE COMPARISON — NeuMF vs Prof Rating Baseline
+  metric    NeuMF    prof_rating_baseline    improvement
+  NDCG@10   0.1329   ...                    ...
+
+✓ Results saved to results/
+  evaluation_sem7.csv  → per-student full ranking
+  fairness_sem7.csv    → metrics by branch
+  baseline_sem7.csv    → NeuMF vs professor-rating baseline
+  metrics_sem7.csv     → aggregated metrics
+>>>>>>> 7430ce3 (Upgraded docs)
 ```
 
 ---
@@ -728,6 +900,46 @@ curl http://localhost:8000/health
 curl http://localhost:8000/student/STU0001
 ```
 
+<<<<<<< HEAD
+=======
+### Explain a Recommendation
+
+```
+GET /explain/{student_id}/{oe_id}?semester=5
+```
+
+Example:
+```bash
+curl http://localhost:8000/explain/STU0001/ME_OE501_Robotics?semester=5
+```
+
+Response:
+```json
+{
+  "student_id": "STU0001",
+  "oe_id": "ME_OE501_Robotics",
+  "semester": 5,
+  "predicted_score": 0.221,
+  "feature_contributions": {
+    "cgpa": 0.0285,
+    "branch_ME": 0.0149,
+    "available_semester": 0.0162,
+    "oe_avg_course_organization": 0.0101,
+    "..."
+  },
+  "top_reasons": [
+    "Your CGPA moderately positively influences this recommendation (+0.0285)",
+    "Semester availability slightly positively influences this recommendation (+0.0162)",
+    "OE is offered by ME branch slightly positively influences this recommendation (+0.0149)"
+  ],
+  "bottom_reasons": [
+    "No features are negatively influencing this recommendation"
+  ],
+  "generated_at": "2026-03-19 10:00:00"
+}
+```
+
+>>>>>>> 7430ce3 (Upgraded docs)
 ---
 
 ## Key Design Decisions
@@ -739,5 +951,14 @@ curl http://localhost:8000/student/STU0001
 | Negative sampling | 1:4 from eligible pool | Meaningful negatives, not random |
 | Grade threshold | ≥ 0.6 = positive label | B and above considered a good fit |
 | Split strategy | Time-based (sem 5/6/7) | Prevents data leakage, simulates real deployment |
+<<<<<<< HEAD
 | Agent trigger | End of each semester | New grades + feedback available at natural cadence |
 | Rollback | NDCG comparison | Never deploy a worse model automatically |
+=======
+| Evaluation | Full 32-OE ranking | Honest assessment — not artificially small candidate pool |
+| Fairness | Metrics per branch | Ensures no branch is systematically disadvantaged |
+| Baseline | Professor-rating baseline | Proves NeuMF adds value over non-personalized ranking |
+| Explainability | SHAP KernelExplainer | Model-agnostic, works with any PyTorch model |
+| Agent trigger | End of each semester | New grades + feedback available at natural cadence |
+| Rollback | NDCG comparison | Never deploy a worse model automatically |
+>>>>>>> 7430ce3 (Upgraded docs)

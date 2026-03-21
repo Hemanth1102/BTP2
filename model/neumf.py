@@ -164,7 +164,6 @@ class NeuMF(nn.Module):
         return sum(p.numel() for p in self.parameters() if p.requires_grad)
 
     def summary(self, student_dim: int, oe_dim: int):
-        """Print a clean model summary."""
         print("NeuMF Architecture")
         print("==================")
         print(f"  Student input dim    : {student_dim}")

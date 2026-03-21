@@ -354,6 +354,22 @@ def train(semester: int = TRAIN_SEMESTER):
         load_checkpoint(best_path, model)
         print(f"  Best model loaded from {best_path}")
 
+    # Re-evaluate on full 32-OE ranking and update checkpoint NDCG
+    # This ensures rollback comparisons use honest metrics not inflated ones
+    print(f"Computing honest NDCG@10 on full 32-OE ranking...")
+    from model.evaluate import evaluate
+    eval_semester = min(semester + 2, 7)   # cap at 7, highest test semester
+    results_df    = evaluate(semester=eval_semester)
+    honest_ndcg  = round(float(results_df["ndcg@10"].mean()), 4)
+    print(f"  Honest NDCG@10 (full 32-OE) : {honest_ndcg}")
+
+    # Update the stored NDCG in checkpoint
+    if os.path.exists(best_path):
+        ckpt = torch.load(best_path, weights_only=True)
+        ckpt["ndcg@10"] = honest_ndcg
+        torch.save(ckpt, best_path)
+        print(f"  Checkpoint NDCG updated to {honest_ndcg}")
+
     return model, history_df
 
 

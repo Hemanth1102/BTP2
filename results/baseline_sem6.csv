@@ -1,0 +1,4 @@
+metric,NeuMF,prof_rating_baseline,improvement
+NDCG@10,0.147,0.0915,0.0556
+Hit@5,0.156,0.106,0.05
+Hit@10,0.316,0.174,0.142

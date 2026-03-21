@@ -259,14 +259,29 @@ def shap_eval(semester: int) -> dict:
         shap_values = explainer.shap_values(combined[:50], nsamples=100)
 
         # Mean absolute SHAP value per feature
-        mean_shap   = np.abs(shap_values).mean(axis=0)
-        if isinstance(mean_shap, np.ndarray) and mean_shap.ndim > 1:
-            mean_shap = mean_shap.mean(axis=0)
+        # Handle all possible SHAP output shapes
+        shap_arr = np.array(shap_values)
+
+        # Shape can be: (n_samples, n_features) or (n_samples, n_features, 1)
+        # or a list of arrays — flatten to (n_features,)
+        if shap_arr.ndim == 3:
+            shap_arr = shap_arr[:, :, 0]       # drop output dim
+        if shap_arr.ndim == 1:
+            shap_arr = shap_arr.reshape(1, -1)  # ensure 2D
+
+        mean_shap = np.abs(shap_arr).mean(axis=0).flatten()
+
+        # Align feature names length with shap values length
+        n_shap    = len(mean_shap)
+        n_feat    = len(all_feature_names)
+        feat_names = all_feature_names[:n_shap] if n_shap <= n_feat else all_feature_names
+        if n_shap > n_feat:
+            mean_shap = mean_shap[:n_feat]
 
         # Feature importance DataFrame
         importance_df = pd.DataFrame({
-            "feature"   : all_feature_names,
-            "importance": mean_shap.flatten(),
+            "feature"   : feat_names,
+            "importance": mean_shap,
         }).sort_values("importance", ascending=False).reset_index(drop=True)
 
         importance_df.to_csv(

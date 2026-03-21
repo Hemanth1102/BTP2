@@ -36,6 +36,8 @@ import os
 import random
 import numpy as np
 import pandas as pd
+import joblib
+from sklearn.preprocessing import MinMaxScaler
 from features.encoders import BranchEncoder, GradeEncoder
 
 random.seed(42)
@@ -138,6 +140,20 @@ def build_student_features(students_df: pd.DataFrame,
     sem_cols    = [f"sem{s}_avg" for s in range(1, 5)]
     final_cols  = ["student_id"] + branch_cols + ["cgpa", "avg_core_grade"] + sem_cols
     student_features = student_features[final_cols]
+
+    # Normalize continuous columns only
+    # Branch OHE is already 0/1 — do not normalize
+    cols_to_normalize = ["cgpa"]
+
+    scaler = MinMaxScaler()
+    student_features[cols_to_normalize] = scaler.fit_transform(
+        student_features[cols_to_normalize]
+    ).round(4)
+
+    # Save scaler — must be applied at inference time too
+    os.makedirs(PROCESSED_DIR, exist_ok=True)
+    joblib.dump(scaler, f"{PROCESSED_DIR}/student_scaler.pkl")
+    print(f"  Scaler saved to {PROCESSED_DIR}/student_scaler.pkl")
 
     print(f"\nStudent features built: {len(student_features)} rows, "
           f"{len(student_features.columns)} columns")

@@ -237,8 +237,9 @@ class AgentLoop:
             "tool"  : "retrain_model",
             "result": retrain_result,
         })
-        outcomes["ndcg_after"] = retrain_result["new_ndcg"]
-        outcomes["replaced"]   = retrain_result["replaced"]
+        outcomes["ndcg_after"]  = retrain_result["new_ndcg"]
+        outcomes["ndcg_before"] = retrain_result["old_ndcg"]   # pass directly, avoid memory pollution
+        outcomes["replaced"]    = retrain_result["replaced"]
 
         # Step 5 — SHAP evaluation
         print(f"\n--- Step 5: SHAP Evaluation ---")
@@ -258,11 +259,13 @@ class AgentLoop:
     def observe(self, outcomes: dict) -> dict:
         """
         Compare this semester's outcomes to previous semester.
-        Summarize what the agent learned.
+        Uses actual checkpoint NDCG values — not memory entries
+        which can be polluted from multiple test runs.
         """
         semester    = outcomes["semester"]
-        ndcg_before = self._get_last_ndcg()
-        ndcg_after  = outcomes.get("ndcg_after", 0.0)
+        ndcg_after  = outcomes.get("ndcg_after",  0.0)
+        ndcg_before = outcomes.get("ndcg_before", self._get_last_ndcg())
+        replaced    = outcomes.get("replaced", False)
         ndcg_delta  = round(ndcg_after - ndcg_before, 4)
 
         sentiment_rank = outcomes.get("sentiment_rank", -1)

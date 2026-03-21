@@ -1,3 +1,15 @@
 timestamp,tool,semester,status,old_ndcg,new_ndcg,replaced
 2026-03-19 02:08:10,retrain_model,6,not_improved,0.6079,0.5873,False
 2026-03-19 02:08:10,shap_eval,6,failed,All arrays must be of the same length,,,-1,-1
+2026-03-22 13:32:50,retrain_model,6,not_improved,0.6119,0.1512,False
+2026-03-22 13:32:51,shap_eval,6,failed,All arrays must be of the same length,,,-1,-1
+2026-03-22 13:37:51,retrain_model,6,not_improved,0.6119,0.1512,False
+2026-03-22 13:37:51,shap_eval,6,success,"['branch_CSE', 'branch_ECE', 'oe_avg_assignment_usefulness', 'oe_avg_course_organization', 'branch_ME']","['oe_avg_overall_rating', 'sem4_avg', 'available_semester', 'is_new_oe', 'is_new_prof']",16,25
+2026-03-22 13:42:16,retrain_model,6,improved,0.1512,0.1562,True
+2026-03-22 13:42:16,shap_eval,6,success,"['oe_avg_assignment_usefulness', 'oe_avg_overall_rating', 'sem3_avg', 'sem1_avg', 'branch_CE']","['sentiment_score', 'branch_CSE', 'available_semester', 'is_new_oe', 'is_new_prof']",21,25
+2026-03-22 13:46:26,retrain_model,6,improved,0.1326,0.147,True
+2026-03-22 13:46:27,shap_eval,6,success,"['branch_CE', 'oe_avg_overall_rating', 'oe_avg_assignment_usefulness', 'cgpa', 'branch_ECE']","['oe_avg_course_organization', 'branch_CSE', 'available_semester', 'is_new_oe', 'is_new_prof']",19,25
+2026-03-22 14:13:16,retrain_model,6,improved,0.1326,0.147,True
+2026-03-22 14:13:16,shap_eval,6,success,"['branch_CSE', 'oe_avg_overall_rating', 'branch_EEE', 'oe_avg_assignment_usefulness', 'cgpa']","['oe_avg_interaction', 'branch_CE', 'available_semester', 'is_new_oe', 'is_new_prof']",18,25
+2026-03-22 14:16:29,retrain_model,6,improved,0.1326,0.147,True
+2026-03-22 14:16:30,shap_eval,6,success,"['oe_avg_assignment_usefulness', 'branch_ME', 'branch_ECE', 'oe_avg_overall_rating', 'branch_CSE']","['branch_ME', 'branch_CSE', 'is_new_oe', 'available_semester', 'is_new_prof']",20,25
