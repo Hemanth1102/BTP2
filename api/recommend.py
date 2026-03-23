@@ -102,6 +102,7 @@ class ModelLoader:
         self.checkpoint_path  = None
         self.checkpoint_info  = {}
         self.student_scaler   = None
+        self.oe_scaler        = None
 
     def load(self):
         print("Loading model and data...")
@@ -154,13 +155,21 @@ class ModelLoader:
         self.oe_info_df     = pd.read_csv(f"{RAW_DIR}/oe_info.csv")
         self.interaction_df = pd.read_csv(f"{PROCESSED_DIR}/interaction_matrix.csv")
 
-        # Load student scaler from feature engineering
+        # Load student scaler
         scaler_path = f"{PROCESSED_DIR}/student_scaler.pkl"
         if os.path.exists(scaler_path):
             self.student_scaler = joblib.load(scaler_path)
-            print(f"  Scaler loaded from {scaler_path}")
+            print(f"  Student scaler loaded from {scaler_path}")
         else:
-            print(f"  Warning: student_scaler.pkl not found — features not normalized")
+            print(f"  Warning: student_scaler.pkl not found — student features not normalized")
+
+        # Load OE scaler
+        oe_scaler_path = f"{PROCESSED_DIR}/oe_scaler.pkl"
+        if os.path.exists(oe_scaler_path):
+            self.oe_scaler = joblib.load(oe_scaler_path)
+            print(f"  OE scaler loaded from {oe_scaler_path}")
+        else:
+            print(f"  Warning: oe_scaler.pkl not found — OE features not normalized")
 
         # Cold start handler
         self.cold_start = ColdStartHandler()
@@ -242,6 +251,16 @@ def score_oes(student_id   : str,
 
     student_vec = torch.tensor(raw_vec, dtype=torch.float32).unsqueeze(0).to(loader.device)
 
+    from model.dataset import OE_FEATURE_COLS
+
+    # Columns that were normalized during feature engineering
+    # Exclude: branch OHE, sem OHE, binary flags — all already 0/1
+    oe_cont_cols = [c for c in OE_FEATURE_COLS
+                    if not c.startswith("branch_")
+                    and c not in ("sem5", "sem6", "sem7",
+                                  "is_new_oe", "is_new_prof")]
+    oe_cont_idx  = [OE_FEATURE_COLS.index(c) for c in oe_cont_cols]
+
     scored = []
     with torch.no_grad():
         for _, oe_row in eligible_oes.iterrows():
@@ -250,11 +269,15 @@ def score_oes(student_id   : str,
             if oe_id not in loader.oe_lookup:
                 continue
 
-            oe_vec = torch.tensor(
-                loader.oe_lookup[oe_id], dtype=torch.float32
-            ).unsqueeze(0).to(loader.device)
+            raw_oe = loader.oe_lookup[oe_id].copy()
+            if loader.oe_scaler is not None:
+                import numpy as np
+                raw_oe[oe_cont_idx] = loader.oe_scaler.transform(
+                    raw_oe[oe_cont_idx].reshape(1, -1)
+                ).flatten()
 
-            score = loader.model(student_vec, oe_vec).item()
+            oe_vec = torch.tensor(raw_oe, dtype=torch.float32).unsqueeze(0).to(loader.device)
+            score  = loader.model(student_vec, oe_vec).item()
 
             scored.append({
                 "oe_id"          : oe_id,

@@ -44,10 +44,11 @@ STUDENT_FEATURE_COLS = (
 )
 
 # OE feature columns — must match feature_engineering.py output
+# available_semester replaced with OHE (sem5, sem6, sem7) — 16 dims total
 OE_FEATURE_COLS = (
     ["branch_CSE", "branch_ECE", "branch_ME", "branch_CE", "branch_EEE"] +
-    ["available_semester",
-     "oe_avg_teaching_clarity", "oe_avg_course_organization",
+    ["sem5", "sem6", "sem7"] +
+    ["oe_avg_teaching_clarity", "oe_avg_course_organization",
      "oe_avg_overall_rating",   "oe_avg_interaction",
      "oe_avg_assignment_usefulness",
      "sentiment_score", "is_new_oe", "is_new_prof"]

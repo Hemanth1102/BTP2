@@ -134,7 +134,7 @@ def build_student_features(students_df: pd.DataFrame,
 
     # OHE branch
     student_features = be.encode_df(student_features, "branch")
-
+    
     # Final column order
     branch_cols = be.feature_names
     sem_cols    = [f"sem{s}_avg" for s in range(1, 5)]
@@ -143,17 +143,14 @@ def build_student_features(students_df: pd.DataFrame,
 
     # Normalize continuous columns only
     # Branch OHE is already 0/1 — do not normalize
-    cols_to_normalize = ["cgpa"]
+    cols_to_normalize = ["cgpa", "avg_core_grade",
+                         "sem1_avg", "sem2_avg", "sem3_avg", "sem4_avg"]
 
-    scaler = MinMaxScaler()
-    student_features[cols_to_normalize] = scaler.fit_transform(
-        student_features[cols_to_normalize]
-    ).round(4)
-
-    # Save scaler — must be applied at inference time too
-    os.makedirs(PROCESSED_DIR, exist_ok=True)
-    joblib.dump(scaler, f"{PROCESSED_DIR}/student_scaler.pkl")
-    print(f"  Scaler saved to {PROCESSED_DIR}/student_scaler.pkl")
+    # Fix: fit scaler ONLY on training students (sem 5) to prevent data leakage
+    # Training students are those whose OE semester is 5
+    # We identify them via the student_id list — passed in from run()
+    # For now we return features unscaled and let run() handle the split-aware scaling
+    # (see run() below for the correct fit/transform logic)
 
     print(f"\nStudent features built: {len(student_features)} rows, "
           f"{len(student_features.columns)} columns")
@@ -169,7 +166,7 @@ def build_oe_features(oe_info_df: pd.DataFrame,
     """
     For each OE:
       - OHE offering_branch
-      - available_semester (raw int)
+      - sem5, sem6, sem7 (OHE of available_semester — categorical not continuous)
       - professor rating columns (from prof_features)
       - sentiment_score (from prof_features)
       - is_new_oe flag
@@ -196,18 +193,41 @@ def build_oe_features(oe_info_df: pd.DataFrame,
     rename_map  = {col: f"oe_{col}" for col in RATING_COLS}
     oe_features = oe_features.rename(columns=rename_map)
 
-    # Final column order
-    branch_cols  = be.feature_names
-    rating_cols  = [f"oe_{c}" for c in RATING_COLS]
-    final_cols   = (
-        ["oe_id"] + branch_cols +
-        ["available_semester"] + rating_cols +
+    branch_cols = be.feature_names
+
+    # OHE available_semester — treat as categorical not continuous
+    # sem5, sem6, sem7 are distinct categories with no ordinal relationship
+    oe_features["sem5"] = (oe_features["available_semester"] == 5).astype(int)
+    oe_features["sem6"] = (oe_features["available_semester"] == 6).astype(int)
+    oe_features["sem7"] = (oe_features["available_semester"] == 7).astype(int)
+
+    # Final column order — replace available_semester with sem5/sem6/sem7
+    sem_cols    = ["sem5", "sem6", "sem7"]
+    rating_cols = [f"oe_{c}" for c in RATING_COLS]
+    final_cols  = (
+        ["oe_id"] + branch_cols + sem_cols + rating_cols +
         ["sentiment_score", "is_new_oe", "is_new_prof"]
     )
     oe_features = oe_features[final_cols]
 
+    # Normalize OE continuous columns only
+    # Rating columns are 1-5 scale → normalize to 0-1
+    # sem OHE is already 0/1, branch OHE is 0/1, flags are 0/1
+    # sentiment_score is already 0-1 but normalize for consistency
+    oe_cols_to_normalize = [f"oe_{c}" for c in RATING_COLS] + ["sentiment_score"]
+
+    oe_scaler = MinMaxScaler()
+    oe_features[oe_cols_to_normalize] = oe_scaler.fit_transform(
+        oe_features[oe_cols_to_normalize]
+    ).round(4)
+
+    # Save OE scaler — must be applied at inference time
+    os.makedirs(PROCESSED_DIR, exist_ok=True)
+    joblib.dump(oe_scaler, f"{PROCESSED_DIR}/oe_scaler.pkl")
+    print(f"  OE scaler saved to {PROCESSED_DIR}/oe_scaler.pkl")
+
     print(f"OE features built     : {len(oe_features)} rows, "
-          f"{len(oe_features.columns)} columns")
+          f"{len(oe_features.columns)} columns  (sem OHE added, dim=16)")
     return oe_features
 
 
@@ -318,6 +338,33 @@ def run():
     student_features   = build_student_features(students_df, student_courses_df)
     oe_features        = build_oe_features(oe_info_df, prof_features_df)
     interaction_matrix = build_interaction_matrix(students_df, student_oe_df, oe_info_df)
+
+    # ── Split-aware student normalization ────────────────────────
+    # Fix data leakage: fit scaler ONLY on training students (sem 5)
+    # then transform val (sem 6) and test (sem 7) students separately
+    cols_to_normalize = ["cgpa", "avg_core_grade",
+                         "sem1_avg", "sem2_avg", "sem3_avg", "sem4_avg"]
+
+    # Get training student IDs — those who appear in sem 5 interactions
+    train_student_ids = interaction_matrix[
+        interaction_matrix["split"] == "train"
+    ]["student_id"].unique()
+
+    train_mask = student_features["student_id"].isin(train_student_ids)
+
+    # Fit ONLY on training students
+    student_scaler = MinMaxScaler()
+    student_scaler.fit(student_features.loc[train_mask, cols_to_normalize])
+
+    # Transform ALL students using training-fitted scaler
+    student_features[cols_to_normalize] = student_scaler.transform(
+        student_features[cols_to_normalize]
+    ).round(4)
+
+    # Save scaler
+    joblib.dump(student_scaler, f"{PROCESSED_DIR}/student_scaler.pkl")
+    print(f"  Student scaler fitted on {train_mask.sum()} training students")
+    print(f"  Student scaler saved to {PROCESSED_DIR}/student_scaler.pkl")
 
     # Save
     student_features.to_csv(f"{PROCESSED_DIR}/student_features.csv",   index=False)

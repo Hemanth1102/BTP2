@@ -70,9 +70,9 @@ class ColdStartHandler:
         # Scaled feature matrices for similarity search
         self._student_matrix = None
         self._oe_matrix      = None
-        # Use shared scaler from feature_engineering (same scale as model input)
+        # Both scalers loaded from feature_engineering outputs
         self._scaler_student = None
-        self._scaler_oe      = MinMaxScaler()
+        self._scaler_oe      = None
 
     # ─────────────────────────────────────────────────────────
     # LOAD
@@ -86,7 +86,7 @@ class ColdStartHandler:
         self.students_df           = pd.read_csv(f"{self.raw_dir}/students.csv")
         self.oe_info_df            = pd.read_csv(f"{self.raw_dir}/oe_info.csv")
 
-        # Load shared student scaler from feature engineering
+        # Load student scaler — fitted on training students only
         scaler_path = f"{self.processed_dir}/student_scaler.pkl"
         if os.path.exists(scaler_path):
             self._scaler_student = joblib.load(scaler_path)
@@ -94,6 +94,15 @@ class ColdStartHandler:
         else:
             print(f"  Warning: student_scaler.pkl not found, using new MinMaxScaler")
             self._scaler_student = MinMaxScaler()
+
+        # Load OE scaler — fitted on all OEs
+        oe_scaler_path = f"{self.processed_dir}/oe_scaler.pkl"
+        if os.path.exists(oe_scaler_path):
+            self._scaler_oe = joblib.load(oe_scaler_path)
+            print(f"  Loaded OE scaler from {oe_scaler_path}")
+        else:
+            print(f"  Warning: oe_scaler.pkl not found, using new MinMaxScaler")
+            self._scaler_oe = MinMaxScaler()
 
         self._build_student_matrix()
         self._build_oe_matrix()
@@ -129,13 +138,15 @@ class ColdStartHandler:
         """
         oe_cols = (
             [c for c in self.oe_features_df.columns if c.startswith("branch_")] +
-            ["available_semester",
-             "oe_avg_teaching_clarity", "oe_avg_course_organization",
+            ["sem5", "sem6", "sem7"] +
+            ["oe_avg_teaching_clarity", "oe_avg_course_organization",
              "oe_avg_overall_rating",   "oe_avg_interaction",
              "oe_avg_assignment_usefulness", "sentiment_score"]
         )
+        # OE features are already normalized by feature_engineering
+        # Use them directly — no need to refit scaler
         matrix = self.oe_features_df[oe_cols].values.astype(float)
-        self._oe_matrix = self._scaler_oe.fit_transform(matrix)
+        self._oe_matrix = matrix
 
     # ─────────────────────────────────────────────────────────
     # COLD START — NEW STUDENT

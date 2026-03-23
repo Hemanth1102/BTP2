@@ -1,2 +1,2 @@
 timestamp,semester,ndcg_before,ndcg_after,ndcg_delta,replaced,sentiment_rank,observation
-2026-03-22 14:16:30,6,0.1326,0.147,0.0144,True,20,Model improved by +0.0144 this semester
+2026-03-23 10:13:12,6,0.1442,0.1442,0.0,False,18,Model performance unchanged

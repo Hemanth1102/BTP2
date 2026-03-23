@@ -13,3 +13,7 @@ timestamp,tool,semester,status,old_ndcg,new_ndcg,replaced
 2026-03-22 14:13:16,shap_eval,6,success,"['branch_CSE', 'oe_avg_overall_rating', 'branch_EEE', 'oe_avg_assignment_usefulness', 'cgpa']","['oe_avg_interaction', 'branch_CE', 'available_semester', 'is_new_oe', 'is_new_prof']",18,25
 2026-03-22 14:16:29,retrain_model,6,improved,0.1326,0.147,True
 2026-03-22 14:16:30,shap_eval,6,success,"['oe_avg_assignment_usefulness', 'branch_ME', 'branch_ECE', 'oe_avg_overall_rating', 'branch_CSE']","['branch_ME', 'branch_CSE', 'is_new_oe', 'available_semester', 'is_new_prof']",20,25
+2026-03-23 02:20:21,retrain_model,6,not_improved,0.1383,0.1364,False
+2026-03-23 02:20:22,shap_eval,6,success,"['branch_ME', 'branch_CE', 'branch_ECE', 'branch_CSE', 'branch_EEE']","['oe_avg_interaction', 'sem4_avg', 'available_semester', 'is_new_oe', 'is_new_prof']",18,25
+2026-03-23 10:13:11,retrain_model,6,not_improved,0.1442,0.1442,False
+2026-03-23 10:13:12,shap_eval,6,success,"['cgpa', 'branch_ME', 'sem4_avg', 'oe_avg_interaction', 'sem2_avg']","['sem5', 'sem6', 'sem7', 'is_new_oe', 'is_new_prof']",18,27
